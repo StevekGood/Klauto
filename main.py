@@ -1,7 +1,8 @@
 import asyncio
-from fastapi import FastAPI
+import os
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.responses import PlainTextResponse
 import uvicorn
-# from dotenv import load_dotenv
 from klone_game_client import KlondikeGameClient
 from farm_data_manager import FarmDataManager
 from farm_action_manager import FarmActionManager
@@ -14,32 +15,34 @@ from farm_scheduler import (
     CraftFactoryTask
 )
 
-# load_dotenv()
+API_TOKEN = os.environ.get("SECRET_API_TOKEN")
 
-client = KlondikeGameClient()
+client = KlondikeGameClient() 
 data = FarmDataManager()
 actions = FarmActionManager(client, data)
 scheduler = FarmTaskScheduler(client, data, actions)
 
-# Create a global reusable background plan
-global_plan = scheduler.create_plan("Фоновая Индустриализация 24/7")
+global_plan = scheduler.create_plan("Render Cloud Core Automation")
 global_plan.interval_seconds = 1800
 
-# Load modular instruction instances sequence
 global_plan.instructions.extend([
     HarvestGreenhousesTask(),
     DigGreenhousesTask(),
     PlantGreenhousesTask(recipe_id="P_WHEAT"),
-    CollectFactoriesTask(repeat_on_pick=True)
+    CollectFactoriesTask(repeat_on_pick=True),
 ])
 
-# === WEB INTERFACE FOR REMOTE CONTROL ===
-app = FastAPI(title="Klondike Automation Core API")
-background_loop_task = None
+app = FastAPI(title="Secure Klondike Automation Gateway")
+background_task_holder = None
+
+def verify_token(token: str):
+    """Internal helper to drop illegal unauthorized web requests."""
+    if token != API_TOKEN:
+        raise HTTPException(status_code=403, detail="Access Denied: Invalid Security Token Configuration.")
 
 @app.get("/")
-def read_root():
-    """Healthcheck endpoint to keep free hosting providers from sleeping."""
+def read_root(token: str = Query(...)):
+    verify_token(token)
     return {
         "status": "online",
         "level": data.level,
@@ -48,30 +51,45 @@ def read_root():
     }
 
 @app.get("/start")
-def start_automation():
-    """Remote API command to fire up the background task loops."""
-    global background_loop_task
-    if global_plan.is_active:
-        return {"message": "Automation loop is already running actively."}
+def start_automation(token: str = Query(...)):
+    verify_token(token)
+    global background_task_holder
     
-    # Spawn the async loop task in the web server background safely
-    background_loop_task = asyncio.create_task(
+    if global_plan.is_active:
+        return {"message": "Automation worker loop is already actively executing tasks."}
+        
+    global_plan.is_active = True
+    background_task_holder = asyncio.ensure_future(
         scheduler.start_plan_loop(global_plan.id, delay_seconds=0)
     )
-    return {"message": "Automation successfully triggered and running in background."}
+    
+    print("[Web Gateway]: Asynchronous background loop task successfully detached.")
+    return {"message": "Automation successfully triggered and running securely in background."}
 
 @app.get("/stop")
-def stop_automation():
-    """Remote API command to securely halt active worker routines."""
+def stop_automation(token: str = Query(...)):
+    verify_token(token)
     if not global_plan.is_active:
-        return {"message": "Automation is already resting."}
-    
+        return {"message": "Automation is already in a resting status."}
+        
     global_plan.is_active = False
-    return {"message": "Termination signal dispatched. Scheduler will halt after current step."}
+    return {"message": "Halt signal received. Scheduler background loops will suspend immediately."}
+
+@app.get("/view-logs", response_class=PlainTextResponse)
+def view_network_logs(token: str = Query(...), lines: int = 100):
+    """Convenient secure endpoint to read the tail of client_network.log directly in browser."""
+    verify_token(token)
+    log_path = "client_network.log"
+    if not os.path.exists(log_path):
+        return "Log storage matrix is empty or file hasn't been instantiated yet."
+        
+    try:
+        with open(log_path, "r", encoding="utf-8", errors="ignore") as f:
+            content = f.readlines()
+            return "".join(content[-lines:])
+    except Exception as e:
+        return f"Failed to retrieve log stream blocks: {str(e)}"
 
 if __name__ == "__main__":
-    # Render.com automatically populates the PORT environment variable
-    import os
     port = int(os.environ.get("PORT", 8000))
-    # Run the high performance web server gateway
     uvicorn.run(app, host="0.0.0.0", port=port)
