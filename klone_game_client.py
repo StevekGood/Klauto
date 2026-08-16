@@ -45,7 +45,7 @@ class KlondikeGameClient:
 
         vk_metadata = vk_metadata or {
             "bdate": os.environ.get("VK_USER_BD"),
-            "sex": os.environ.get("VK_USER_BD"),
+            "sex": os.environ.get("VK_USER_SEX"),
             "first_name": os.environ.get("VK_USER_FIRST_NAME"),
             "last_name": os.environ.get("VK_USER_LAST_NAME"),
         }
