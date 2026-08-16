@@ -1,7 +1,7 @@
 import asyncio
 from fastapi import FastAPI
 import uvicorn
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from klone_game_client import KlondikeGameClient
 from farm_data_manager import FarmDataManager
 from farm_action_manager import FarmActionManager
@@ -14,7 +14,7 @@ from farm_scheduler import (
     CraftFactoryTask
 )
 
-load_dotenv()
+# load_dotenv()
 
 client = KlondikeGameClient()
 data = FarmDataManager()
