@@ -40,6 +40,8 @@ def verify_token(token: str):
     if token != API_TOKEN:
         raise HTTPException(status_code=403, detail="Access Denied: Invalid Security Token Configuration.")
 
+# === API ENDPOINTS WITH ASYNC HANDLERS FIX ===
+
 @app.get("/")
 def read_root(token: str = Query(...)):
     verify_token(token)
@@ -51,7 +53,7 @@ def read_root(token: str = Query(...)):
     }
 
 @app.get("/start")
-def start_automation(token: str = Query(...)):
+async def start_automation(token: str = Query(...)):
     verify_token(token)
     global background_task_holder
     
@@ -59,21 +61,22 @@ def start_automation(token: str = Query(...)):
         return {"message": "Automation worker loop is already actively executing tasks."}
         
     global_plan.is_active = True
-    background_task_holder = asyncio.ensure_future(
+    background_task_holder = asyncio.create_task(
         scheduler.start_plan_loop(global_plan.id, delay_seconds=0)
     )
     
-    print("[Web Gateway]: Asynchronous background loop task successfully detached.")
+    print("[Web Gateway]: Background loop safely detached in the main execution thread.")
     return {"message": "Automation successfully triggered and running securely in background."}
 
 @app.get("/stop")
-def stop_automation(token: str = Query(...)):
+async def stop_automation(token: str = Query(...)):
     verify_token(token)
     if not global_plan.is_active:
         return {"message": "Automation is already in a resting status."}
         
     global_plan.is_active = False
     return {"message": "Halt signal received. Scheduler background loops will suspend immediately."}
+
 
 @app.get("/view-logs", response_class=PlainTextResponse)
 def view_network_logs(token: str = Query(...), lines: int = 100):
