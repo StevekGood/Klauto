@@ -14,7 +14,7 @@ if sys.platform == "win32":
 class KlondikeGameClient:
     """Low-level game client responsible for session handshake, crypto signatures, and raw POST I/O with deep network logging."""
     
-    def __init__(self, user_id: str, auth_key: str, vk_metadata: dict):
+    def __init__(self, user_id: str | None = None, auth_key: str | None = None, vk_metadata: dict | None = None):
         self.user_id = user_id or os.environ.get("KLONDIKE_USER_ID")
         self.auth_key = auth_key or os.environ.get("KLONDIKE_AUTH_KEY")
 
