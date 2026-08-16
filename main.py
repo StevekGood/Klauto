@@ -79,19 +79,39 @@ async def stop_automation(token: str = Query(...)):
 
 
 @app.get("/view-logs", response_class=PlainTextResponse)
-def view_network_logs(token: str = Query(...), lines: int = 100):
-    """Convenient secure endpoint to read the tail of client_network.log directly in browser."""
+def view_network_logs(token: str = Query(...), mode: str = "history", lines: int = 150):
+    """
+    Advanced log viewer with automated trace filtering to bypass heavy JSON text streams.
+    Modes: 
+      - 'history': Shows clean structural timeline logs ([Scheduler], [ActionManager], etc.)
+      - 'raw': Shows exact raw lines from the tail of the log file
+    """
     verify_token(token)
     log_path = "client_network.log"
     if not os.path.exists(log_path):
-        return "Log storage matrix is empty or file hasn't been instantiated yet."
+        return "Log matrix storage file hasn't been instantiated yet."
         
     try:
         with open(log_path, "r", encoding="utf-8", errors="ignore") as f:
             content = f.readlines()
+            
+        if mode == "raw":
             return "".join(content[-lines:])
+            
+        filtered_timeline = []
+        for line in content:
+            if any(anchor in line for anchor in ["[Scheduler", "[ActionManager]", "[Main]", "[Dashboard]", "[Web Gateway]"]):
+                if "{" in line or "}" in line or '"' in line:
+                    continue
+                filtered_timeline.append(line.strip())
+                
+        if not filtered_timeline:
+            return "No high-level automation traces found yet. Check if the plan is running."
+            
+        return "\n".join(filtered_timeline[-lines:])
+        
     except Exception as e:
-        return f"Failed to retrieve log stream blocks: {str(e)}"
+        return f"Failed to parse and process log timeline streams: {str(e)}"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
