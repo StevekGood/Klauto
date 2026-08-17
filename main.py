@@ -1,7 +1,7 @@
 import asyncio
 import os
 from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import PlainTextResponse
+from fastapi.responses import FileResponse
 import uvicorn
 from klone_game_client import KlondikeGameClient
 from farm_data_manager import FarmDataManager
@@ -23,13 +23,10 @@ actions = FarmActionManager(client, data)
 scheduler = FarmTaskScheduler(client, data, actions)
 
 global_plan = scheduler.create_plan("Render Cloud Core Automation")
-global_plan.interval_seconds = 1800
+global_plan.interval_seconds = 900
 
 global_plan.instructions.extend([
-    HarvestGreenhousesTask(),
-    DigGreenhousesTask(),
-    PlantGreenhousesTask(recipe_id="P_WHEAT"),
-    CollectFactoriesTask(repeat_on_pick=True),
+    CollectFactoriesTask(repeat_on_pick=True)
 ])
 
 app = FastAPI(title="Secure Klondike Automation Gateway")
@@ -40,7 +37,6 @@ def verify_token(token: str):
     if token != API_TOKEN:
         raise HTTPException(status_code=403, detail="Access Denied: Invalid Security Token Configuration.")
 
-# === API ENDPOINTS WITH ASYNC HANDLERS FIX ===
 
 @app.get("/")
 def read_root(token: str = Query(...)):
@@ -78,40 +74,20 @@ async def stop_automation(token: str = Query(...)):
     return {"message": "Halt signal received. Scheduler background loops will suspend immediately."}
 
 
-@app.get("/view-logs", response_class=PlainTextResponse)
-def view_network_logs(token: str = Query(...), mode: str = "history", lines: int = 150):
-    """
-    Advanced log viewer with automated trace filtering to bypass heavy JSON text streams.
-    Modes: 
-      - 'history': Shows clean structural timeline logs ([Scheduler], [ActionManager], etc.)
-      - 'raw': Shows exact raw lines from the tail of the log file
-    """
+@app.get("/view-logs")
+def download_network_logs(token: str = Query(...)):
+    """Forces the browser to securely download the entire, unfiltered client_network.log file."""
     verify_token(token)
     log_path = "client_network.log"
+    
     if not os.path.exists(log_path):
-        return "Log matrix storage file hasn't been instantiated yet."
+        raise HTTPException(status_code=404, detail="Log file has not been created yet.")
         
-    try:
-        with open(log_path, "r", encoding="utf-8", errors="ignore") as f:
-            content = f.readlines()
-            
-        if mode == "raw":
-            return "".join(content[-lines:])
-            
-        filtered_timeline = []
-        for line in content:
-            if any(anchor in line for anchor in ["[Scheduler", "[ActionManager]", "[Main]", "[Dashboard]", "[Web Gateway]"]):
-                if "{" in line or "}" in line or '"' in line:
-                    continue
-                filtered_timeline.append(line.strip())
-                
-        if not filtered_timeline:
-            return "No high-level automation traces found yet. Check if the plan is running."
-            
-        return "\n".join(filtered_timeline[-lines:])
-        
-    except Exception as e:
-        return f"Failed to parse and process log timeline streams: {str(e)}"
+    return FileResponse(
+        path=log_path, 
+        filename="client_network.log", 
+        media_type="text/plain"
+    )
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))

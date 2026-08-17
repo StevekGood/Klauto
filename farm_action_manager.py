@@ -239,3 +239,26 @@ class FarmActionManager:
 
         self.data_manager.update_from_server_response(response)
         return response
+
+    def consume_energy_items(self, item_id: str, energy_per_item: int, amount_to_eat: int) -> dict:
+        """Sends chained events to consume energy food items and mutates local energy capacity."""
+        if amount_to_eat <= 0:
+            return {}
+            
+        events = []
+        for _ in range(amount_to_eat):
+            events.append({
+                "type": "item",
+                "action": "use",
+                "itemId": item_id
+            })
+            
+        print(f"[ActionManager]: Posting food request to eat {amount_to_eat}x '{item_id}'...")
+        response = self.client.execute_raw_action(events)
+        if response and response.get("cmd") != "ERR":
+            added_energy = amount_to_eat * energy_per_item
+            self.data_manager.energy += added_energy
+            print(f"[ActionManager]: Restored +{added_energy} energy units in memory. Current: {self.data_manager.energy}")
+            
+        self.data_manager.update_from_server_response(response)
+        return response
