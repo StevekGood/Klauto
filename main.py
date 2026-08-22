@@ -5,8 +5,8 @@ from fastapi.responses import FileResponse
 from contextlib import asynccontextmanager
 import uvicorn
 
-from dotenv import load_dotenv
-load_dotenv() 
+# from dotenv import load_dotenv
+# load_dotenv()
 
 from farm_scheduler import FarmTaskScheduler, CollectFactoriesTask, CollectGreenhouseFactoriesTask
 
