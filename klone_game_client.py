@@ -12,14 +12,12 @@ if sys.platform == "win32":
     sys.stdout.reconfigure(encoding='utf-8')
 
 class KlondikeGameClient:
-    """Low-level game client responsible for session handshake, crypto signatures, and raw POST I/O with deep network logging."""
-    
     def __init__(self, user_id: str | None = None, auth_key: str | None = None, vk_metadata: dict | None = None):
         self.user_id = user_id or os.environ.get("KLONDIKE_USER_ID")
         self.auth_key = auth_key or os.environ.get("KLONDIKE_AUTH_KEY")
 
         if not self.auth_key:
-            print("[Client FATAL]: Auth key missing! Please set KLONDIKE_AUTH_KEY variable.")
+            print("[Client FATAL]: Auth key missing. Please set KLONDIKE_AUTH_KEY variable.")
         
         # Base router settings (K8s proxies)
         self.url_auth = "https://klone-vk-4.k8s-release-ru.gametech-app.ru/klonevk/auth"

@@ -1,17 +1,18 @@
 import asyncio
 import uuid
+import time
 from abc import ABC, abstractmethod
-from farm_data_manager import FarmDataManager
+from farm_models import GreenhouseFactory
+from farm_action_manager import FarmDataManager
 from farm_action_manager import FarmActionManager
+from klone_game_client import KlondikeGameClient
 
 class SchedulerTask(ABC):
-    """Abstract base class for all decoupled modular automation tasks."""
     def __init__(self, target_type: str = "all"):
-        self.target_type = target_type  # "all", "smithy", "hoofed", etc.
+        self.target_type = target_type
 
     @abstractmethod
     def execute(self, data: FarmDataManager, actions: FarmActionManager):
-        """Polymorphic execution entrypoint for individual strategic actions."""
         pass
 
 
@@ -20,10 +21,12 @@ class HarvestGreenhousesTask(SchedulerTask):
         mature = [gh for gh in data.greenhouses if gh.is_ready_to_harvest]
         if mature: actions.harvest_greenhouses_mass(mature)
 
+
 class DigGreenhousesTask(SchedulerTask):
     def execute(self, data: FarmDataManager, actions: FarmActionManager):
         slag = [gh for gh in data.greenhouses if gh.needs_weeding]
         if slag: actions.dig_greenhouses_mass(slag)
+
 
 class PlantGreenhousesTask(SchedulerTask):
     def __init__(self, recipe_id: str):
@@ -41,20 +44,54 @@ class PlantGreenhousesTask(SchedulerTask):
 class CollectFactoriesTask(SchedulerTask):
     def __init__(self, target_type: str = "all", repeat_on_pick: bool = False):
         super().__init__(target_type)
-        self.repeat_on_pick = repeat_on_pick  # If True, puts the resource back to craft automatically
+        self.repeat_on_pick = repeat_on_pick
 
     def execute(self, data: FarmDataManager, actions: FarmActionManager):
         factories = data.factories
         if self.target_type != "all":
-            factories = [f for f in factories if self.target_type in f.item_proto.lower()]
+            if self.target_type == "all-no-greenhouses":
+                factories = [f for f in factories if not isinstance(f, GreenhouseFactory)]
+            else:
+                factories = [f for f in factories if self.target_type in f.item_proto.lower()]
         
         ready_factories = [f for f in factories if f.has_product_ready]
         if ready_factories: 
             actions.collect_from_factories_mass(ready_factories, repeat_on_pick=self.repeat_on_pick)
 
 
+class CollectGreenhouseFactoriesTask(SchedulerTask):
+    def __init__(self, target_type: str = "all", repeat_on_pick: bool = False, consumable_energy_item: dict = None):
+            super().__init__(target_type)
+            self.repeat_on_pick = repeat_on_pick
+            self.consumable_energy_item = consumable_energy_item
+    
+    def execute(self, data: FarmDataManager, actions: FarmActionManager):
+        greenhouse_factories = data.greenhouse_factories
+        if self.target_type != "all":
+            greenhouse_factories = [f for f in greenhouse_factories if self.target_type in f.item_proto.lower()]
+        
+        ready_greenhouse_factories = [f for f in greenhouse_factories if f.has_product_ready]
+        if ready_greenhouse_factories: 
+            if not self.repeat_on_pick:
+                actions.collect_from_factories_mass(ready_greenhouse_factories, repeat_on_pick=False)
+            else:
+                ready_count = len(ready_greenhouse_factories)
+                batch_index = 0
+                while ready_count > 0:
+                    batch_index += 1
+                    if batch_index > 1:
+                        time.sleep(3)
+                    if self.consumable_energy_item and data.energy < ready_count and data.energy < data.max_energy:
+                        actions.consume_energy_items(self.consumable_energy_item["item_id"], self.consumable_energy_item["energy_per_item"])
+                    current_energy = data.energy
+                    actions.collect_from_factories_mass(ready_greenhouse_factories[:current_energy], repeat_on_pick=True)
+                    del ready_greenhouse_factories[:current_energy]
+                    ready_count = len(ready_greenhouse_factories)
+                    if batch_index > 20:
+                        return
+                    
+
 class CraftFactoryTask(SchedulerTask):
-    """Explicitly launches production for either a specific factory instance ID or a group category."""
     def __init__(self, recipe_id: str, target_type: str = "all", specific_obj_id: int = None):
         super().__init__(target_type)
         self.recipe_id = recipe_id
@@ -69,89 +106,106 @@ class CraftFactoryTask(SchedulerTask):
             
         if factories:
             actions.start_craft_in_factories_mass(factories, self.recipe_id)
-            
 
-class CollectAnimalsTask(SchedulerTask):
+
+class ConsumeEnergyItemsTask(SchedulerTask):
+    def __init__(self, item_id: str, energy_per_item: int, amount_to_eat: int = None):
+        super().__init__()
+        self.item_id = item_id
+        self.energy_per_item = energy_per_item
+        self.amount_to_eat = amount_to_eat
+
     def execute(self, data: FarmDataManager, actions: FarmActionManager):
-        animals = data.animals
-        if self.target_type != "all":
-            animals = [a for a in animals if a.type == self.target_type]
-            
-        ready_animals = [a for a in animals if a.has_product_ready]
-        if ready_animals: actions.collect_from_animals_mass(ready_animals)
+        actions.consume_energy_items(self.item_id, self.energy_per_item, self.amount_to_eat)
 
+
+class FertilizeGreenhouseFactoriesTask(SchedulerTask):
+    def __init__(self, target_type = "all", fertilizer_item_id: str = None):
+        super().__init__(target_type)
+        self.fertilizer_item_id = fertilizer_item_id
+
+    def execute(self, data, actions):
+        greenhouse_factories = data.greenhouse_factories
+        if self.target_type != "all":
+            greenhouse_factories = [f for f in greenhouse_factories if self.target_type in f.item_proto.lower()]
+        
+        not_fertilized_factories = [f for f in greenhouse_factories if not f.current_craft_fertilized]
+        if not_fertilized_factories: 
+            actions.fertilize_greenhouse_factories_mass(not_fertilized_factories, fertilize_item_id=self.fertilizer_item_id)
+        
 
 class AutomationPlan:
-    """A user-configured collection of tasks to repeat or run sequentially."""
     def __init__(self, name: str):
         self.id = str(uuid.uuid4())[:8]
         self.name = name
         self.instructions: list[SchedulerTask] = []
-        self.interval_seconds = 0  # 0 = once, >0 = periodic loop interval
+        self.interval_seconds = 0
         self.is_active = False
 
 
-class FarmTaskScheduler:
-    def __init__(self, client, data_manager: FarmDataManager, action_manager: FarmActionManager):
-        self.client = client
-        self.data = data_manager
-        self.actions = action_manager
+class UserSession:
+    def __init__(self, user_id: str, auth_key: str, vk_metadata: dict = None):
+        self.user_id = user_id
+        self.client = KlondikeGameClient(user_id, auth_key, vk_metadata)
+        self.data = FarmDataManager()
+        self.actions = FarmActionManager(self.client, self.data)
         self.plans: dict[str, AutomationPlan] = {}
-        self.execution_lock = asyncio.Lock()
+        self.lock = asyncio.Lock()
 
     def create_plan(self, name: str) -> AutomationPlan:
         plan = AutomationPlan(name)
         self.plans[plan.id] = plan
         return plan
 
-    def delete_plan(self, plan_id: str):
-        if plan_id in self.plans:
-            self.plans[plan_id].is_active = False
-            del self.plans[plan_id]
 
-    async def start_plan_loop(self, plan_id: str, delay_seconds: int = 0):
-        plan = self.plans.get(plan_id)
+class FarmTaskScheduler:
+    def __init__(self):
+        self.sessions: dict[str, UserSession] = {}
+        self.network_semaphore = asyncio.Semaphore(5)
+
+    def register_user(self, user_id: str, auth_key: str, vk_metadata: dict = None) -> UserSession:
+        if user_id not in self.sessions:
+            self.sessions[user_id] = UserSession(user_id, auth_key, vk_metadata)
+        else:
+            self.sessions[user_id].client.auth_key = auth_key
+        return self.sessions[user_id]
+
+    async def start_plan_loop(self, user_id: str, plan_id: str, delay_seconds: int = 0):
+        session = self.sessions.get(user_id)
+        if not session: return
+        
+        plan = session.plans.get(plan_id)
         if not plan: return
         
         plan.is_active = True
-        print(f"[Scheduler]: Plan '{plan.name}' armed. Initial delay: {delay_seconds}s.")
+        print("Scheduler", f"Plan '{plan.name}' armed for User {user_id}. Delay: {delay_seconds}s.")
         
         if delay_seconds > 0:
             await asyncio.sleep(delay_seconds)
             
         while plan.is_active:
-            await self._execute_plan_safely(plan)
+            await self._execute_plan_safely(user_id, plan)
             
             if plan.interval_seconds > 0 and plan.is_active:
-                print(f"[Scheduler]: Plan '{plan.name}' sleeping for: {plan.interval_seconds}s.")
                 await asyncio.sleep(plan.interval_seconds)
             else:
                 plan.is_active = False
 
-    async def _execute_plan_safely(self, plan: AutomationPlan):
-        """Acquires lock, forces a fresh logging handshake refresh, and runs commands polymorphically."""
-        async with self.execution_lock:
-            print(f"\n[Scheduler MUTEX LOCK ACQUIRED]: Executing Plan Sequence -> '{plan.name}'")
-            
-            loop = asyncio.get_event_loop()
-            print("[Scheduler]: Requesting fresh authentication snapshot for maximum session transparency...")
-            fresh_profile = await loop.run_in_executor(None, self.client.login)
-            if "error" in fresh_profile:
-                print(f"[Scheduler ERROR]: Re-auth failed during plan iteration. Skipping execution.")
-                return
-                
-            await loop.run_in_executor(None, self.data.save_and_parse, fresh_profile)
-            print(f"[Scheduler Sync]: Current level: {self.data.level} | Fresh active energy: {self.data.energy}")
-            
-            for task in plan.instructions:
-                if not plan.is_active:
-                    print(f"[Scheduler]: Plan '{plan.name}' terminated prematurely.")
-                    break
+    async def _execute_plan_safely(self, user_id: str, plan: AutomationPlan):
+        session = self.sessions.get(user_id)
+        if not session: return
+
+        async with session.lock:
+            async with self.network_semaphore:
+                print("Scheduler", f"Executing sequence for User {user_id} -> '{plan.name}'")
+                loop = asyncio.get_event_loop()
+                fresh_profile = await loop.run_in_executor(None, session.client.login)
+                if "error" in fresh_profile:
+                    print("Scheduler ERROR", f"Re-auth failed for User {user_id}.")
+                    return
                     
-                print(f"[Scheduler]: Dispatching Polymorphic Class Task -> {task.__class__.__name__}")
-                await loop.run_in_executor(None, task.execute, self.data, self.actions)
-                
-                # Inter-transaction signature guard interval delay
-                await asyncio.sleep(3.0)
-                
-            print(f"[Scheduler MUTEX LOCK RELEASED]: Plan Sequence completed -> '{plan.name}'\n")
+                await loop.run_in_executor(None, session.data.save_and_parse, fresh_profile)
+                for task in plan.instructions:
+                    if not plan.is_active: break
+                    await loop.run_in_executor(None, task.execute, session.data, session.actions)
+                    await asyncio.sleep(3.0)

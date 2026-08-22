@@ -1,5 +1,3 @@
-import time
-
 class Storage:
     def __init__(self, raw_items: list = None, raw_objects: list = None):
         self.items = {}
@@ -69,11 +67,12 @@ class House(GameObject):
 
 class Factory(Manufacture):
     """Represents production structures utilizing hired workforce setups."""
-    def __init__(self, raw_data: dict):
+    def __init__(self, raw_data: dict, require_workers: bool = True):
         super().__init__(raw_data)
         self.craft_no = raw_data.get("craftNo", 0)
         self.repeat_recipe = raw_data.get("repeat")
         self.workers = raw_data.get("workers", [])
+        self.require_workers = require_workers
         
         self.current_craft = raw_data.get("currentCraft", {})
         if self.current_craft:
@@ -81,6 +80,13 @@ class Factory(Manufacture):
             self.current_craft["id"] = item_name[1:] if item_name.startswith("@") else item_name
 
         self.pending_crafts = raw_data.get("pendingCrafts", [])
+
+
+class GreenhouseFactory(Factory):
+    def __init__(self, raw_data: dict):
+        super().__init__(raw_data, False)
+        self.repeat_fertilizer = raw_data.get("repeatFertilizer")
+        self.current_craft_fertilized = raw_data.get("currentCraftFertilized", False)
 
 
 class Animal(Manufacture):

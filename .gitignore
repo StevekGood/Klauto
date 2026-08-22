@@ -1,3 +1,4 @@
 .env
+__pycache__
 profile_data.json
 *.log

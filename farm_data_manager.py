@@ -1,6 +1,6 @@
 import json
 import os
-from farm_models import GameObject, House, Factory, Greenhouse, Animal, Storage, RemoteLocation
+from farm_models import GameObject, House, Factory, GreenhouseFactory, Greenhouse, Animal, Storage, RemoteLocation
 
 class FarmDataManager:
     """Central processing unit for local farm states with specialized tracking arrays."""
@@ -25,11 +25,12 @@ class FarmDataManager:
         self.main_storage = Storage()
         
         # Segregated tracking lists for OOP manipulation
-        self.all_game_objects = {}  # Dict keyed by active int IDs
-        self.factories = []         # List containing Factory model objects
-        self.greenhouses = []       # List containing Greenhouse model objects
-        self.animals = []           # List containing Animal model objects
-        self.houses = []            # List containing House model objects (Added tracker)
+        self.all_game_objects = {}      # Dict keyed by active int IDs
+        self.factories = []             # List containing Factory model objects
+        self.greenhouse_factories = []   # List containing GreenhouseFactory model objects
+        self.greenhouses = []           # List containing Greenhouse model objects
+        self.animals = []               # List containing Animal model objects
+        self.houses = []                # List containing House model objects
         
         # Remote mapped islands territories (keyed by locationId)
         self.locations = {}
@@ -75,6 +76,7 @@ class FarmDataManager:
         self.cash_money = int(state.get("cashMoney", 0))
         self.silver_money = int(state.get("silverMoney", 0))
         self.energy = int(state.get("energy", 0))
+        self.max_energy = 42
         self.kerosene = int(state.get("kerosene", 0))
         self.collection_items = state.get("collectionItems", {})
         self.work_places = state.get("workPlaces", [])
@@ -105,17 +107,20 @@ class FarmDataManager:
                 obj_id = int(obj_id)
                 obj_type = obj.get("type")
                 
-                # STRICT STRUCTURAL FILTERING LOGIC
                 if "greenhouse" in obj:
                     typed_obj = Greenhouse(obj)
                     self.greenhouses.append(typed_obj)
                 elif obj_type == "factory":
-                    typed_obj = Factory(obj)
+                    if "tepl" in obj.get("item", "").lower():
+                        typed_obj = GreenhouseFactory(obj)
+                        self.greenhouse_factories.append(typed_obj)
+                    else:
+                        typed_obj = Factory(obj)
                     self.factories.append(typed_obj)
                 elif obj_type == "house":
                     typed_obj = House(obj)
                     self.houses.append(typed_obj)
-                elif obj_type in ["plumed", "hoofed"]:
+                elif obj_type in ["plumed", "hoofed", "breed"]:
                     typed_obj = Animal(obj)
                     self.animals.append(typed_obj)
                 else:
