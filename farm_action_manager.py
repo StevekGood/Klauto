@@ -12,6 +12,7 @@ class FarmActionManager:
     def _has_enough_materials_for_craft(self, craft_recipe: dict) -> bool:
         """Internal helper to verify if the main storage contains enough items to satisfy the recipe cost."""
         if not craft_recipe or "materials" not in craft_recipe:
+            print(f"[ActionManager Resource Check]: No recipe or materials: {craft_recipe}")
             return False
             
         recipe_materials = craft_recipe.get("materials", [])
