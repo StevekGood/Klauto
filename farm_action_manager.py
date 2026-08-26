@@ -53,7 +53,7 @@ class FarmActionManager:
                     print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Factory is inactive.")
                     continue
                     
-                if not self._has_enough_materials_for_craft(factory.current_craft):
+                if factory.current_craft and not self._has_enough_materials_for_craft(factory.current_craft):
                     print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Missing required ingredients on warehouse shelves.")
                     continue
 
