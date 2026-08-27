@@ -27,8 +27,8 @@ async def lifespan(app: FastAPI):
         plan.instructions.extend([
             CollectFactoriesTask(target_type="all-no-greenhouses", repeat_on_pick=True),
             CollectGreenhouseFactoriesTask(repeat_on_pick=True, consumable_energy_item={
-                "item_id": "CR_MONKEYBREAD",
-                "energy_per_item": 5
+                "item_id": "CR_EXP_APPLE",
+                "energy_per_item": 2
             })
         ])
         print("[System]: 'master_plan' successfully mapped inside user storage registry.")
