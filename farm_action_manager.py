@@ -34,7 +34,6 @@ class FarmActionManager:
         
         for factory in factories_list:
             for mat in factory.materials:
-                print(f"[DEBUG] mat: {mat}, factory materials: {factory.materials}, factory ready: {factory.has_product_ready}")
                 if not mat:
                     continue
                 raw_item = mat.get("item", "")
@@ -91,6 +90,8 @@ class FarmActionManager:
                     count = int(mat.get("count", 1))
                     self.data_manager.main_storage.items[item_id] = self.data_manager.main_storage.items.get(item_id, 0) + count
                 factory.materials = []
+        else:
+            print(f"[FATAL]: request: {events}, response: {response}")
                 
         self.data_manager.update_from_server_response(response)
         return response
