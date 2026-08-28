@@ -34,13 +34,12 @@ class FarmActionManager:
         
         for factory in factories_list:
             for mat in factory.materials:
+                print(f"[DEBUG] mat: {mat}, factory materials: {factory.materials}, factory ready: {factory.has_product_ready}")
                 if not mat:
                     continue
                 raw_item = mat.get("item", "")
                 item_id = raw_item[1:] if raw_item.startswith("@") else raw_item
                 count = int(mat.get("count", 1))
-                if count == 1:
-                    print(f"[DEBUG] mat: {mat}, count: {count}, factory materials: {factory.materials}, factory ready: {factory.has_product_ready}")
                 events.append({
                     "type": "item",
                     "action": "pick",
