@@ -33,6 +33,7 @@ class FarmActionManager:
         events = []
         
         for factory in factories_list:
+            processed_mat_count = 0
             for mat in factory.materials:
                 if not mat:
                     continue
@@ -46,28 +47,30 @@ class FarmActionManager:
                     "itemId": item_id,
                     "count": count
                 })
+                processed_mat_count += 1
             
-                if repeat_on_pick:
-                    if factory.require_workers and not factory.current_craft:
-                        print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Factory is inactive.")
-                        continue
-                        
-                    if factory.current_craft and not self._has_enough_materials_for_craft(factory.current_craft):
-                        print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Missing required ingredients on warehouse shelves.")
-                        continue
+            if repeat_on_pick:
+                if factory.require_workers and not factory.current_craft:
+                    print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Factory is inactive.")
+                    continue
+                    
+                if factory.current_craft and not self._has_enough_materials_for_craft(factory.current_craft):
+                    print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Missing required ingredients on warehouse shelves.")
+                    continue
 
-                    current_slots = 1 if factory.current_craft else 0
-                    current_slots += len(factory.pending_crafts)
-                    if current_slots >= 3:
-                        print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Queue is full.")
-                        continue
+                current_slots = 1 if factory.current_craft else 0
+                current_slots += len(factory.pending_crafts)
+                if current_slots >= 3:
+                    print(f"[ActionManager]: Auto-repeat skipped for factory ID {factory.id} - Queue is full.")
+                    continue
 
-                    recipe_id = factory.repeat_recipe
+                recipe_id = factory.repeat_recipe
+                if not recipe_id:
+                    recipe_id = factory.current_craft.get("id", None)
                     if not recipe_id:
-                        recipe_id = factory.current_craft.get("id", None)
-                        if not recipe_id:
-                            continue
-                        
+                        continue
+
+                for i in range(processed_mat_count):
                     events.append({
                         "type": "factory",
                         "action": "craft",
