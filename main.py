@@ -1,7 +1,10 @@
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ModuleNotFoundError:
+    pass
 
 import uvicorn
 from presentation.api import app
