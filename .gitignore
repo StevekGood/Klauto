@@ -1,4 +1,6 @@
 .env
 __pycache__
+/logs
+/data
 profile_data.json
 *.log
