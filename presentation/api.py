@@ -46,6 +46,7 @@ app.add_middleware(
 )
 
 def handle_telegram_user_register(tg_user, user_id, auth_key):
+    print(f"TG User: {tg_user}, User ID: {user_id}, Auth Key: {auth_key}")
     if not tg_user or not user_id or not auth_key or not tg_user_database.register(tg_user.get("id"), user_id, auth_key):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Bad registration request")
 
