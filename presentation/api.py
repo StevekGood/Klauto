@@ -39,7 +39,7 @@ API_TOKEN = os.environ.get("SECRET_API_TOKEN")
 app = FastAPI(title="Klondike Automation API", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["https://klauto.onrender.com"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -141,15 +141,6 @@ async def register(payload: RegisterSchema, authorization: str = Header(None)):
 
 LEGACY_API_TOKEN = os.environ.get("LEGACY_API_TOKEN")
 
-@app.get("/")
-async def root(token: str = Query(...), user_id: str = Query(...)):
-    if token != LEGACY_API_TOKEN:
-        raise HTTPException(status_code=403)
-    session = runner.sessions.get(user_id)
-    if not session:
-        return {"status": "not_registered"}
-    return {"status": "ok", "energy": session.state.energy if session.state else None}
-
 @app.get("/start")
 async def start(token: str = Query(...), user_id: str = Query(...), plan_id: str = Query(...)):
     if token != LEGACY_API_TOKEN:
@@ -183,3 +174,5 @@ async def get_logs(token: str = Query(...), log_type: str = "truncated"):
     if not os.path.exists(path):
         raise HTTPException(404)
     return FileResponse(path, media_type="text/plain")
+
+app.frontend("/", directory="static", fallback="index.html")

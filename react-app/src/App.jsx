@@ -14,7 +14,7 @@ function App() {
       window.Telegram?.WebApp?.initData || "missing_telegram_init_data";
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/auth", {
+      const response = await fetch("https://klauto.onrender.com/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -45,7 +45,7 @@ function App() {
       window.Telegram?.WebApp?.initData || "missing_telegram_init_data";
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/register", {
+      const response = await fetch("https://klauto.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

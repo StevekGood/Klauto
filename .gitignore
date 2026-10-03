@@ -2,6 +2,7 @@
 __pycache__
 /logs
 /data
+/static
 /database/raw_items
 /database/process_items.py
 *.log
