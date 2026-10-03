@@ -24,10 +24,16 @@ from infrastructure.logger import get_logger
 from presentation.telegram_user_database import TelegramUserDatabase
 
 logger = get_logger()
-tg_user_database = TelegramUserDatabase((os.environ.get("TG_USER_WHITELIST") or "").split(","), (os.environ.get("TG_USER_BLACKLIST") or "").split(","))
 runner = PlanRunner(logger, asyncio.Semaphore(5))
 repository = FileFarmRepository()
 farm_service = FarmService(logger)
+
+tg_user_whitelist_string = os.environ.get("TG_USER_WHITELIST", "")
+tg_user_blacklist_string = os.environ.get("TG_USER_BLACKLIST", "")
+tg_user_database = TelegramUserDatabase(
+    tg_user_whitelist_string.split(",") if tg_user_whitelist_string else [],
+    tg_user_blacklist_string.split(",") if tg_user_blacklist_string else []
+)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -46,7 +52,6 @@ app.add_middleware(
 )
 
 def handle_telegram_user_register(tg_user, user_id, auth_key):
-    print(f"TG User: {tg_user}, User ID: {user_id}, Auth Key: {auth_key}")
     if not tg_user or not user_id or not auth_key or not tg_user_database.register(tg_user.get("id"), user_id, auth_key):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Bad registration request")
 
