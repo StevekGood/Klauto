@@ -2,5 +2,6 @@
 __pycache__
 /logs
 /data
-profile_data.json
+/database/raw_items
+/database/process_items.py
 *.log

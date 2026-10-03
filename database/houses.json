@@ -1,0 +1,4426 @@
+[
+    {
+        "type": "house",
+        "id": "B_CHURCH",
+        "sellCoins": 1,
+        "name": "Храм",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_church.png",
+        "hint": "Храм сделает вас добрее и поможет наладить взаимоотношения с местными.",
+        "objType": 0,
+        "objAnims": [
+            "b_church",
+            "b_church_f"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 10,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 100,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SPRUCE"
+                    }
+                ]
+            },
+            {
+                "xp": 20,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 100,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SPRUCE"
+                    }
+                ]
+            },
+            {
+                "xp": 30,
+                "humanPlaces": 4,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 100,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SPRUCE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 6000,
+        "employCost": 1000,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_HOTEL",
+        "gift": true,
+        "sellCoins": 50000,
+        "name": "Отель 3*",
+        "level": 10,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 80,
+        "saleBuyCash": 59,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_hotel.png",
+        "hint": "Отель 3* на 20 номеров со всеми удобствами. Заселение всегда по самым низким ценам. Время проживания на три дня.",
+        "objType": 0,
+        "objAnims": [
+            "b_hotel",
+            "b_hotel_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 250,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_TINPLANE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 20,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_TILE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86700,
+        "employCost": 1800,
+        "fixCost": true
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_SKY",
+        "gift": false,
+        "sellCoins": 400000,
+        "name": "Небоскрёб",
+        "level": 33,
+        "buyCoins": 4000000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 33,
+        "shopImage": "buildings/m_hotel_01.png",
+        "hint": "Небоскрёб отличается большой вместимостью до 30-ти человек и временем проживания на шесть дней.",
+        "objType": 0,
+        "objAnims": [
+            "b_hotel_01",
+            "b_hotel_01_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 300,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 50,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 30,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 50,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 40,
+                        "item": "@CR_GLASSPLATE"
+                    },
+                    {
+                        "count": 25,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 30,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 30,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 30,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_SHAWL"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 172800,
+        "employCost": 5000,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_SKY_NEW",
+        "gift": false,
+        "sellCoins": 400000,
+        "name": "Небоскрёб",
+        "level": 33,
+        "buyCoins": 4000000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 33,
+        "shopImage": "buildings/m_hotel_04.png",
+        "hint": "Небоскрёб отличается большой вместимостью до 30-ти человек и временем проживания на шесть дней.",
+        "objType": 0,
+        "objAnims": [
+            "b_hotel_04",
+            "b_hotel_04_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 50,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_ROPE"
+                    }
+                ]
+            },
+            {
+                "xp": 300,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 50,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 30,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 50,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 40,
+                        "item": "@CR_GLASSPLATE"
+                    },
+                    {
+                        "count": 25,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 30,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 30,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 30,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_SHAWL"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 4,
+        "employTime": 172800,
+        "employCost": 5000,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_CONDO",
+        "gift": true,
+        "sellCoins": 50000,
+        "name": "Кондоминиум",
+        "level": 10,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 30,
+        "saleBuyCash": 19,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_hotel_02.png",
+        "hint": "В кондоминиум можно заселить 20 человек на три дня, которые будут работать, как 40 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_hotel_03",
+            "b_hotel_03_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 300,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 25,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_FORCE"
+                    }
+                ]
+            },
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_GLASSPLATE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_FRAME"
+                    },
+                    {
+                        "count": 30,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 40,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_STOVE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 130000,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 1
+    },
+    {
+        "type": "house",
+        "id": "B_RESIDENCE",
+        "config": "@RESIDECE_CONFIG",
+        "gift": true,
+        "sellCoins": 3000,
+        "name": "Поместье",
+        "level": 10,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 10,
+        "shopImage": "buildings/m_residence.png",
+        "hint": "В Поместье можно заселить двух человек на долгий срок.",
+        "objType": 0,
+        "objAnims": [
+            "b_white_house_2",
+            "b_white_house_2_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 50,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 50,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_FORCE"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_CUPBOARD"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_WICKERSOFA"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_BED"
+                    }
+                ]
+            },
+            {
+                "xp": 1500,
+                "humanPlaces": 2,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 30,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_STOVE"
+                    },
+                    {
+                        "count": 30,
+                        "item": "@CR_TILE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 2419200,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_BIG",
+        "gift": true,
+        "sellCoins": 50000,
+        "name": "Гостиница",
+        "level": 10,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 30,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_house_big.png",
+        "hint": "Многокомнатная гостиница на 12 человек с общей ванной комнатой и баром на первом этаже. Время проживания на три дня.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_big",
+            "b_house_big_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 200,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 300,
+                "humanPlaces": 12,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 12,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86700,
+        "employCost": 1800,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_BIG_COLOR_1",
+        "gift": true,
+        "sellCoins": 50000,
+        "name": "Гостиница",
+        "level": 10,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 30,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_house_big_color_1.png",
+        "hint": "Многокомнатная гостиница на 12 человек с общей ванной комнатой и баром на первом этаже. Время проживания на три дня.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_big_color_1",
+            "b_house_big_color_1_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 200,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 300,
+                "humanPlaces": 12,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 12,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86700,
+        "employCost": 1800,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_BIG_COLOR_2",
+        "gift": true,
+        "sellCoins": 50000,
+        "name": "Гостиница",
+        "level": 10,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 30,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_house_big_color_2.png",
+        "hint": "Многокомнатная гостиница на 12 человек с общей ванной комнатой и баром на первом этаже. Время проживания на три дня.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_big_color_2",
+            "b_house_big_color_2_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 200,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 300,
+                "humanPlaces": 12,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 12,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86700,
+        "employCost": 1800,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_BIG_VAL",
+        "gift": true,
+        "sellCoins": 50000,
+        "name": "Гостиница",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 30,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_house_big_14feb.png",
+        "hint": "Многокомнатная гостиница на 12 человек с общей ванной комнатой и баром на первом этаже. Время проживания на три дня.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_big_14_feb",
+            "b_house_big_14_feb_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 200,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 300,
+                "humanPlaces": 12,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 12,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86700,
+        "employCost": 1800,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_1",
+        "sellCoins": 150,
+        "name": "Палатка",
+        "level": 1,
+        "buyCoins": 1500,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_house_for_1.png",
+        "hint": "Палатка без удобств, но с отоплением. Можно поселить одного рабочего на полтора часа.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_1",
+            "b_house_for_1_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 15,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@R_STONE"
+                    },
+                    {
+                        "count": 1000,
+                        "item": "@COINS"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@R_CLAY"
+                    }
+                ]
+            },
+            {
+                "xp": 25,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@R_SPRUCE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@R_SEQ"
+                    }
+                ]
+            },
+            {
+                "xp": 35,
+                "humanPlaces": 1,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 3,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_SILK"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 2100,
+        "employCost": 200,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_1_NOKIA",
+        "sellCoins": 0,
+        "name": "Палатка",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_house_for_1.png",
+        "hint": "Палатка без удобств, но с отоплением. Можно поселить одного рабочего на полтора часа.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_1",
+            "b_house_for_1_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 15,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@R_STONE"
+                    },
+                    {
+                        "count": 1000,
+                        "item": "@COINS"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@R_CLAY"
+                    }
+                ]
+            },
+            {
+                "xp": 25,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@R_SPRUCE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@R_SEQ"
+                    }
+                ]
+            },
+            {
+                "xp": 35,
+                "humanPlaces": 1,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 3,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_SILK"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 2100,
+        "employCost": 200,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_2",
+        "sellCoins": 2000,
+        "name": "Лачуга",
+        "level": 1,
+        "buyCoins": 20000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_house_for_2.png",
+        "hint": "Жильё для 3 рабочих на 3 часа. Только три койки и просторная кладовка.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_2",
+            "b_house_for_2_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 50,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@R_STONE"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_STRING"
+                    }
+                ]
+            },
+            {
+                "xp": 70,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@R_CLAY"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_TILE"
+                    }
+                ]
+            },
+            {
+                "xp": 100,
+                "humanPlaces": 3,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 4,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 3900,
+        "employCost": 300,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_2_COLOR_1",
+        "sellCoins": 2000,
+        "name": "Лачуга",
+        "level": 4,
+        "buyCoins": 20000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 4,
+        "shopImage": "buildings/m_house_for_2_color_1.png",
+        "hint": "Жильё для 3 рабочих на 3 часа. Только три койки и просторная кладовка.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_2_color_1",
+            "b_house_for_2_color_1_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 50,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@R_STONE"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_STRING"
+                    }
+                ]
+            },
+            {
+                "xp": 70,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@R_CLAY"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_TILE"
+                    }
+                ]
+            },
+            {
+                "xp": 100,
+                "humanPlaces": 3,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 4,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 3900,
+        "employCost": 300,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_2_COLOR_3",
+        "sellCoins": 2000,
+        "name": "Лачуга",
+        "level": 4,
+        "buyCoins": 20000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 4,
+        "shopImage": "buildings/m_house_for_2_color_3.png",
+        "hint": "Жильё для 3 рабочих на 3 часа. Только три койки и просторная кладовка.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_2_color_3",
+            "b_house_for_2_color_3_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 50,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@R_STONE"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_STRING"
+                    }
+                ]
+            },
+            {
+                "xp": 70,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@R_CLAY"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_TILE"
+                    }
+                ]
+            },
+            {
+                "xp": 100,
+                "humanPlaces": 3,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 4,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 3900,
+        "employCost": 300,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_3",
+        "sellCoins": 5000,
+        "name": "Дом с мансардой",
+        "level": 10,
+        "buyCoins": 50000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 10,
+        "shopImage": "buildings/m_house_for_3.png",
+        "hint": "Просторное жильё с удобствами для 4 человек с ванной комнатой и подвалом. Можно поселить рабочих на 9 часов.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_3",
+            "b_house_for_3_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_CHAIN"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_PLANK"
+                    }
+                ]
+            },
+            {
+                "xp": 150,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SILK"
+                    }
+                ]
+            },
+            {
+                "xp": 170,
+                "humanPlaces": 4,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_TABLE"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 11100,
+        "employCost": 600,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_3_COLOR_1",
+        "sellCoins": 5000,
+        "name": "Дом с мансардой",
+        "level": 10,
+        "buyCoins": 50000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 10,
+        "shopImage": "buildings/m_house_for_3_color_1.png",
+        "hint": "Просторное жильё с удобствами для 4 человек с ванной комнатой и подвалом. Можно поселить рабочих на 9 часов.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_3_color_1",
+            "b_house_for_3_color_1_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_CHAIN"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_PLANK"
+                    }
+                ]
+            },
+            {
+                "xp": 150,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SILK"
+                    }
+                ]
+            },
+            {
+                "xp": 170,
+                "humanPlaces": 4,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_TABLE"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 11100,
+        "employCost": 600,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_3_COLOR_2",
+        "sellCoins": 5000,
+        "name": "Дом с мансардой",
+        "level": 10,
+        "buyCoins": 50000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 10,
+        "shopImage": "buildings/m_house_for_3_color_2.png",
+        "hint": "Просторное жильё с удобствами для 4 человек с ванной комнатой и подвалом. Можно поселить рабочих на 9 часов.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_3_color_2",
+            "b_house_for_3_color_2_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 100,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_CHAIN"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_PLANK"
+                    }
+                ]
+            },
+            {
+                "xp": 150,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SILK"
+                    }
+                ]
+            },
+            {
+                "xp": 170,
+                "humanPlaces": 4,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_TABLE"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 11100,
+        "employCost": 600,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_4",
+        "sellCoins": 15000,
+        "name": "Квартиры",
+        "level": 16,
+        "buyCoins": 150000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 16,
+        "shopImage": "buildings/m_house_for_4.png",
+        "hint": "Двухэтажный дом с тремя отдельными квартирами на 6 человек. Можно нанять рабочих на 18 часов.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_4",
+            "b_house_for_4_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 120,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 150,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_TILE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 200,
+                "humanPlaces": 6,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 4,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    },
+                    {
+                        "count": 4,
+                        "item": "@CR_STOOL"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 21900,
+        "employCost": 600,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_4_COLOR_1",
+        "sellCoins": 15000,
+        "name": "Квартиры",
+        "level": 16,
+        "buyCoins": 150000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 16,
+        "shopImage": "buildings/m_house_for_4_color_1.png",
+        "hint": "Двухэтажный дом с тремя отдельными квартирами на 6 человек. Можно нанять рабочих на 18 часов.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_4_color_1",
+            "b_house_for_4_color_1_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 120,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 150,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_TILE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 200,
+                "humanPlaces": 6,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 4,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    },
+                    {
+                        "count": 4,
+                        "item": "@CR_STOOL"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 21900,
+        "employCost": 600,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_4_COLOR_2",
+        "sellCoins": 15000,
+        "name": "Квартиры",
+        "level": 16,
+        "buyCoins": 150000,
+        "buySilvers": 0,
+        "buyCash": 0,
+        "originalBuyReal": 0,
+        "openCash": 16,
+        "shopImage": "buildings/m_house_for_4_color_2.png",
+        "hint": "Двухэтажный дом с тремя отдельными квартирами на 6 человек. Можно нанять рабочих на 18 часов.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_4_color_2",
+            "b_house_for_4_color_2_f"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 120,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 150,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_TILE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 200,
+                "humanPlaces": 6,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 4,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    },
+                    {
+                        "count": 4,
+                        "item": "@CR_STOOL"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 21900,
+        "employCost": 600,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_FOR_DOGS",
+        "sellCoins": 1,
+        "name": "Собачья станция",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_house_for_dogs.png",
+        "hint": "На станции можно покупать снаряжение и собачьи упряжки для экспедиций.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_dogs",
+            "b_house_for_dogs_f"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 10,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 100,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SPRUCE"
+                    }
+                ]
+            },
+            {
+                "xp": 20,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 100,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SPRUCE"
+                    }
+                ]
+            },
+            {
+                "xp": 30,
+                "humanPlaces": 4,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 100,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 100,
+                        "item": "@R_SPRUCE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 600,
+        "employCost": 1000,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_UKHTY_PRIZE",
+        "sellCoins": 5000,
+        "name": "Ухты",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_ukhty_prize.png",
+        "hint": "Просторный дом поселения Ух-ты. Можно поселить одного рабочего ухтанита на две недели.",
+        "objType": 0,
+        "objAnims": [
+            "ukhty_prize"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 1,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 374400,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_INDIGO_PRIZE",
+        "sellCoins": 5000,
+        "name": "Индиго",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_indigo_prize.png",
+        "hint": "Благодаря вам старинная церковь теперь может принимать прихожан. Можно заселить до 30-ти человек и временем проживания на девять дней.",
+        "objType": 0,
+        "objAnims": [
+            "indigo_prize",
+            "indigo_prize_f"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 30,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_ROPE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 259200,
+        "employCost": 5000,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_KHANBULAT_PRIZE",
+        "sellCoins": 5000,
+        "name": "Ханбулат",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_khanbulat_prize.png",
+        "hint": "Некоторые из ханов решили перебраться из диких топей на вашу станцию. Два хана готовы трудиться на вашей станции совершенно бесплатно.",
+        "objType": 0,
+        "objAnims": [
+            "khanbulat_prize"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 2,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_ROPE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 374400,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_BACKWOODS_PRIZE",
+        "sellCoins": 5000,
+        "name": "Землянка",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_glade_prize.png",
+        "hint": "Для длительной и плодотворной работы нет ничего лучше, чем одноместная землянка без удобств. Можно заселить одного провинившегося в чем-либо человека на месяц.",
+        "objType": 0,
+        "objAnims": [
+            "glade_prize"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 1,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 1,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 806400,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_WINNEBAGO_PRIZE",
+        "config": "@PDEF_RW_RAILS_CONFIG",
+        "sellCoins": 50000,
+        "name": "Вигвам",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_winnebago_landmark.png",
+        "hint": "Подарок жителей Великого Озера за помощь в проведении священного ритуала.",
+        "objType": 0,
+        "objAnims": [
+            "b_winnebago_landmark"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 15000,
+                "humanPlaces": 4,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_RIBBON"
+                    },
+                    {
+                        "count": 8,
+                        "item": "@CR_SHAWL"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 1,
+        "employTime": 259200,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_OLD_DEPOT_PRIZE",
+        "sellCoins": 5000,
+        "name": "Заброшенное депо",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_rw_living_wagon_01.png",
+        "hint": "Этот вагончик - благодарность сторожа заброшенного депо за помощь в поимке бандитов. Сюда можно заселить троих друзей на достаточно длительный срок.",
+        "objType": 0,
+        "objAnims": [
+            "b_rw_living_wagon_01",
+            "d_rw_living_wagon_01_flip"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 3,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 3,
+                        "item": "@CR_STOVE"
+                    },
+                    {
+                        "count": 4,
+                        "item": "@CR_WICKERSOFA"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_SWEATER"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 1,
+        "employTime": 259200,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_DNS_PRIZE",
+        "sellCoins": 5000,
+        "name": "Наблюдательная вышка",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_rw_watch_tower_f.png",
+        "hint": "Сюда можно заселить одного друга на достаточно длительный срок.",
+        "objType": 0,
+        "objAnims": [
+            "b_dns_booth"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@R_STONE"
+                    },
+                    {
+                        "count": 1000,
+                        "item": "@COINS"
+                    },
+                    {
+                        "count": 50,
+                        "item": "@R_CLAY"
+                    }
+                ]
+            },
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 500,
+                "humanPlaces": 1,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 1,
+                        "item": "@CR_STOVE"
+                    },
+                    {
+                        "count": 4,
+                        "item": "@CR_WICKERSOFA"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SWEATER"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 1,
+        "employTime": 259200,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_TG_MILL_PRIZE",
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Мельница",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/b_mill_tg.png",
+        "hint": "Можно поселить одного рабочего на две недели.",
+        "objType": 0,
+        "objAnims": [
+            "b_mill_tg_prize",
+            "b_mill_tg_flip_prize"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 500,
+                "humanPlaces": 1,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 1,
+        "employTime": 403200,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_CRAZY_DAY",
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Уютный дом",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_house_for_2_crazy_day.png",
+        "hint": "Сюда можно заселить троих друзей на достаточно длительный срок.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_2_crazy_day",
+            "b_house_for_2_crazy_day_f"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@R_CLAY"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TILE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_BRICKS"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@CR_STRING"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_GLU"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 3,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86400,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_MEYBRIDGE_PRIZE",
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 5000,
+        "name": "Моховой дом",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "openCash": 1,
+        "shopImage": "buildings/m_meybridge_landmark.png",
+        "hint": "Сюда можно заселить одного друга на 15 дней.",
+        "objType": 0,
+        "objAnims": [
+            "b_moss_house"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 50,
+                        "item": "@R_WOOD"
+                    },
+                    {
+                        "count": 50,
+                        "item": "@R_SEQ"
+                    },
+                    {
+                        "count": 50,
+                        "item": "@R_SPRUCE"
+                    }
+                ]
+            },
+            {
+                "xp": 2000,
+                "humanPlaces": 1,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 50,
+                        "item": "@R_STONE"
+                    },
+                    {
+                        "count": 25,
+                        "item": "@R_CLAY"
+                    },
+                    {
+                        "count": 25,
+                        "item": "@R_IRONORE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "backImage": "buildings/shelf_back.png",
+        "employTime": 432000,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_JOE_HOTEL",
+        "gift": false,
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Мечта'",
+        "level": 1,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 269,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_vizor_bd_hotel.png",
+        "hint": "В этом отеле могут с комфортом расположиться 40 постояльцев. Заселение всегда по самым низким ценам. Время проживания на пять дней.",
+        "buyLimit": 1,
+        "objType": 0,
+        "objAnims": [
+            "b_vizor_bd_hotel_home",
+            "b_vizor_hotel_flip_big"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 250,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 40,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 40,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 40,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_TILE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 2,
+        "employTime": 144000,
+        "employCost": 14400,
+        "fixCost": true
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_WALLBRIDGE",
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Охотничий домик",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_wallbridge_landmark.png",
+        "hint": "Сюда можно заселить троих друзей на достаточно длительный срок.",
+        "objType": 0,
+        "objAnims": [
+            "b_wallbridge_landmark",
+            "b_wallbridge_landmark_flip"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@R_CLAY"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TILE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_BRICKS"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@CR_STRING"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_GLU"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 3,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 201600,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_LOST_CALL_CONDO",
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Комфортный домик",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_house_big_color_new.png",
+        "hint": "В Комфортный домик можно заселить 10 человек на три дня, которые будут работать, как 30 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "house_big_color_new",
+            "house_big_color_1_f_new"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 300,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 15,
+                        "item": "@CR_PLANK"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 15,
+                        "item": "@CR_NAIL"
+                    }
+                ]
+            },
+            {
+                "xp": 500,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_BRICKS"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_SLATE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_WINDOW"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 30,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 12,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 2
+    },
+    {
+        "type": "house",
+        "id": "B_HALL2020_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель Империя",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_empire_hotel.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 60 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_empire_hotel",
+            "b_empire_hotel_hlw_home",
+            "b_empire_hotel_flip",
+            "b_empire_hotel_hlw_home_flip"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 60,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 1,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 2
+    },
+    {
+        "type": "house",
+        "id": "B_HOUSE_DNS_ERRAND_PRIZE",
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Уютный дом",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_house_for_2_dns_prize.png",
+        "hint": "Сюда можно заселить троих друзей на достаточно длительный срок.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_for_2_dns_prize",
+            "b_house_for_2_dns_prize_f"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@R_CLAY"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TILE"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_BRICKS"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 0,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 2,
+                        "item": "@CR_STRING"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_WOODSHEET"
+                    },
+                    {
+                        "count": 3,
+                        "item": "@CR_GLU"
+                    }
+                ]
+            },
+            {
+                "xp": 1000,
+                "humanPlaces": 3,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 5,
+                        "item": "@CR_WOODBAR"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_NAIL"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PLANK"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 3,
+        "employTime": 86400,
+        "employCost": 0,
+        "fixCost": false
+    },
+    {
+        "type": "house",
+        "id": "B_NORTHRIDGE_LANDMARK_HOUSE",
+        "entities": [
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Лагерь",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/m_notrhridge_landmark.png",
+        "hint": "Можно заселить 10 человек на три дня, которые будут работать как 40 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_notrhridge_landmark",
+            "b_notrhridge_landmark_flip"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 40,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 12,
+                        "item": "@CR_BED"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PIPE"
+                    },
+                    {
+                        "count": 5,
+                        "item": "@CR_CUPBOARD"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 1,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_GRANTHILL_PRIZE_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Построить"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Большая палатка",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "decorations/d_granthill_actor_main_tent_flip.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 60 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_granthill_actor_main_tent_flip_home"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 60,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 2
+    },
+    {
+        "type": "house",
+        "id": "B_HERMITAGE_PRIZE_HOUSE",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Построить"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Хижина отшельника",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "decorations/d_hermitage_house.png",
+        "hint": "Можно заселить 10 человек на три дня, которые будут работать как 20 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_hermitage_house_home"
+        ],
+        "existSellPickup": true,
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 20,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 10,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 10,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 2,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 1
+    },
+    {
+        "type": "house",
+        "id": "D_DNS_2022_P2_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Мини-отель",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_hotel_hot_koffe.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 60 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_hotel_hot_koffe_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 60,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 2
+    },
+    {
+        "type": "house",
+        "id": "D_GPOND_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Апарт-отель",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_buildings_news_hotel.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 60 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_buildings_news_hotel"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 60,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 2
+    },
+    {
+        "type": "house",
+        "id": "B_NY2022_P3_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Праздничный особняк",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "decorations/d_ny22_p3_house_1_1st_flip.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 60 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_ny22_p3_house_1_1st_flip"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 60,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86700,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 2
+    },
+    {
+        "type": "house",
+        "id": "D_SPR2023_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Кураж'",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_hotel_404_shop.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_hotel_404_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "HEARTWOOD_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Администрация стройтреста",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_heartwood_mainhub_3.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_heartwood_mainhub_3",
+            "b_heartwood_mainhub_3_flip"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "D_INUIT_P1_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель Санборроу",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_inuit_hotel_02.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_inuit_hotel_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "D_DRK_2023_P1_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Семейный отель",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_dog_hotel_2.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_dog_hotel_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "D_OCT2023_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Осенний отель",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_oct2023_hotel_02.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_oct2023_hotel_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "D_EXCHANGE_HOME_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Дом Эдмунда",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_house_edmund_st4_a.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_house_edmund_st4_a_65",
+            "b_house_edmund_st4_a_flip_65",
+            "b_house_edmund_st5_a_65",
+            "b_house_edmund_st5_a_flip_65"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_EGAME_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Биг-бургер'",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_egame_burger_hotel.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_egame_burger_hotel"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_UFO_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Земляне'",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_spr24_ufo_hotel_st2.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_spr24_ufo_hotel_st2_a_90"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_DETECTIVE_24_HOME_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Детективное агентство",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/d_detective_24_hotel_a.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_detective_24_hotel_a_flip",
+            "d_detective_24_hotel_a"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "H_DON_CORNICHON_COUNTER_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Зелёный'",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/don_cornichon_counter_hotel.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "don_cornichon_counter_hotel"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_NOV24_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Бандитское поместье",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_nov24_hotel.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_nov24_hotel"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "D_NY2024_P2_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Резиденция Санты",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "decorations/b_ny2024_p2_santas_office_home.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_ny2024_p2_santas_office_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 130000,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_CRAZY_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Уайтголд'",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_crazy_hotel_02.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_crazy_hotel_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_ESTR25_P2_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Пасхальный'",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_estr25_p2_hotel_home.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_estr25_p2_hotel_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_SAUSAGE_DOG_HOTEL_HOME",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель для собачников",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/d_sausage_dog_hotel_st2.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_sausage_dog_hotel_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "D_RECORDS_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Кошачий отель",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "decorations/b_records_cathotel_st_home.png",
+        "hint": "Можно заселить 20 человек на три дня, которые будут работать как 80 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_records_cathotel_st_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 80,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_TGD25_P1_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Клюквенный отель",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/b_tgd25_p1_hotel_st2.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "b_tgd25_p1_hotel_home"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_FREE_MONEY_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Дом сэра Чейни",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "decorations/d_chaney_house_small.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_chaney_house_small",
+            "d_chaney_house_small_flip"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_FILM_RES_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Отель 'Грантхилл'",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "buildings/d_film_studio.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_film_studio"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    },
+    {
+        "type": "house",
+        "id": "B_CHLOC_HARD_HOTEL",
+        "entities": [
+            {
+                "type": "string",
+                "name": "TEXT_BUILD_BUTTON",
+                "value": "Открыть"
+            },
+            {
+                "type": "string",
+                "name": "LOCK_BUILD_CONGRAT_POPUP",
+                "value": "true"
+            }
+        ],
+        "sellCoins": 50000,
+        "name": "Уютный дом",
+        "level": 0,
+        "buyCoins": 0,
+        "buySilvers": 0,
+        "buyCash": 10000,
+        "originalBuyReal": 0,
+        "shopImage": "decorations/d_chloc_hard_jap_house_01.png",
+        "hint": "Можно заселить 30 человек на три дня, которые будут работать как 120 рабочих.",
+        "objType": 0,
+        "objAnims": [
+            "d_chloc_hard_jap_house_01",
+            "d_chloc_hard_jap_house_01_flip"
+        ],
+        "multiPlace": false,
+        "moved": true,
+        "dynamicLight": false,
+        "upgrades": [
+            {
+                "xp": 1000,
+                "humanPlaces": 120,
+                "fodderPlaces": 0,
+                "materials": [
+                    {
+                        "count": 20,
+                        "item": "@CR_STOOL"
+                    },
+                    {
+                        "count": 20,
+                        "item": "@CR_PODUSHKA"
+                    },
+                    {
+                        "count": 1,
+                        "item": "@CR_TABLE"
+                    }
+                ]
+            }
+        ],
+        "rotateLevel": 0,
+        "employTime": 86400,
+        "employCost": 1800,
+        "fixCost": false,
+        "cloneFactor": 3
+    }
+]

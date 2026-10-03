@@ -1,0 +1,1807 @@
+[
+    {
+        "type": "collectionItem",
+        "id": "REMOTE_SHOVEL",
+        "image": "pickup_shovel.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_1_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Зуб",
+        "image": "collections/bear_claw.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_1_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Жир",
+        "image": "collections/bear_fat.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_1_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Челюсть",
+        "image": "collections/bear_jaw.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_1_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кожа",
+        "image": "collections/bear_skin.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_1_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Статуя",
+        "image": "collections/bear_statue.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_2_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Зуб",
+        "image": "collections/wolf_claw.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_2_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Месяц",
+        "image": "collections/wolf_moon.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_2_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Череп",
+        "image": "collections/wolf_skall.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_2_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Хвост",
+        "image": "collections/wolf_tail.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_2_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Капкан",
+        "image": "collections/wolf_trap.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_3_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Шапка",
+        "image": "collections/digger_hat.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_3_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Черпак",
+        "image": "collections/digger_ladle.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_3_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кирка",
+        "image": "collections/digger_pick.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_3_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Тарелка",
+        "image": "collections/digger_plate.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_3_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Лопата",
+        "image": "collections/digger_shovel.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_4_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Белые кости",
+        "image": "collections/bones_bones.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_4_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кость",
+        "image": "collections/bones_hip.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_4_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ребра",
+        "image": "collections/bones_ribs.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_4_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Рогатый череп",
+        "image": "collections/bones_skull.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_4_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Череп Йети",
+        "image": "collections/bones_yeti.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_5_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Клевер",
+        "image": "collections/lucky_clover.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_5_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Монета",
+        "image": "collections/lucky_coin.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_5_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Подкова",
+        "image": "collections/lucky_horseshoe.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_5_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Талисман",
+        "image": "collections/lucky_mascot.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_5_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Горшочек",
+        "image": "collections/lucky_pot.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_6_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Засов",
+        "image": "collections/door_bolt.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_6_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ручка",
+        "image": "collections/door_handle.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_6_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ключ",
+        "image": "collections/door_key.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_6_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Замок",
+        "image": "collections/door_lock.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_6_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Петля",
+        "image": "collections/door_loop.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_7_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ботинки",
+        "image": "collections/eskimo_boots.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_7_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Нож",
+        "image": "collections/eskimo_knife.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_7_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Маска",
+        "image": "collections/eskimo_mask.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_7_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Трубка",
+        "image": "collections/eskimo_pie.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_7_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Колчан",
+        "image": "collections/eskimo_quiver.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_8_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Топор",
+        "image": "collections/viking_axe.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_8_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Шлем с рогами",
+        "image": "collections/viking_helmet.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_8_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Медальон",
+        "image": "collections/viking_medallion.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_8_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Косичка",
+        "image": "collections/viking_pigrail.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_8_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Меч",
+        "image": "collections/viking_sword.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_9_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Поплавок",
+        "image": "collections/fish_float.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_9_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Крючок",
+        "image": "collections/fish_hook.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_9_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Наживка",
+        "image": "collections/fish_lure.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_9_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Череп рыбы",
+        "image": "collections/fish_skull.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_9_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Банка шпрот",
+        "image": "collections/fish_tin.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_10_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Топаз",
+        "image": "collections/stone_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_10_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Сердолик",
+        "image": "collections/stone_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_10_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кварц",
+        "image": "collections/stone_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_10_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Аметист",
+        "image": "collections/stone_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_10_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Бирюза",
+        "image": "collections/stone_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_11_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Осиновый лист",
+        "image": "collections/autumn_aspenleaf.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_11_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ромашка",
+        "image": "collections/autumn_camomile.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_11_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Три орешка",
+        "image": "collections/autumn_hazelnuts.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_11_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кленовый лист",
+        "image": "collections/autumn_mapleleaf.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_11_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Дубовый лист",
+        "image": "collections/autumn_oakleaf.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_12_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "След медведя",
+        "image": "collections/footprint_bear.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_12_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "След птицы",
+        "image": "collections/footprint_bird.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_12_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "След кабана",
+        "image": "collections/footprint_boar.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_12_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "След человека",
+        "image": "collections/footprint_man.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_12_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "След волка",
+        "image": "collections/footprint_volf.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_13_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Белый гриб",
+        "image": "collections/mush_boletus.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_13_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Шампиньоны",
+        "image": "collections/mush_champ.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_13_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Лисички",
+        "image": "collections/mush_chanterelle.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_13_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Мухомор",
+        "image": "collections/mush_fly.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_13_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Трюфель",
+        "image": "collections/mush_truffle.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_14_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Календула",
+        "image": "collections/grass_calendula.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_14_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ковыль",
+        "image": "collections/grass_feather.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_14_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Мухоловка",
+        "image": "collections/grass_flytrap.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_14_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Женьшень",
+        "image": "collections/grass_ginseng.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_14_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Настурция",
+        "image": "collections/grass_nasturtium.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_15_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Веер",
+        "image": "collections/women_fan.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_15_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Помада",
+        "image": "collections/women_lipstick.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_15_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Зеркальце",
+        "image": "collections/women_mirror.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_15_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Духи",
+        "image": "collections/women_perfume.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_15_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Пудреница",
+        "image": "collections/women_puff_box.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_16_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Бант",
+        "image": "collections/holiday_bow.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_16_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Торт",
+        "image": "collections/holiday_cake.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_16_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Свечи",
+        "image": "collections/holiday_candles.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_16_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Открытка",
+        "image": "collections/holiday_postcard.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_16_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Конфета",
+        "image": "collections/holiday_slapstick.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_17_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Рог коровы",
+        "image": "collections/horn_cow.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_17_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Рога оленя",
+        "image": "collections/horn_deer.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_17_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Рога козы",
+        "image": "collections/horn_goat.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_17_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Рога барана",
+        "image": "collections/horn_ram.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_17_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Рога косули",
+        "image": "collections/horn_roe.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_18_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Адмирал",
+        "image": "collections/bfly_admiral.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_18_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Птицекрыл",
+        "image": "collections/bfly_bird.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_18_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Мёртвая голова",
+        "image": "collections/bfly_head.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_18_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Парнасиус",
+        "image": "collections/bfly_parnasius.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_18_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Урания",
+        "image": "collections/bfly_urania.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_19_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Пух",
+        "image": "collections/wind_down.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_19_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Флаг",
+        "image": "collections/wind_flag.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_19_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Флейта",
+        "image": "collections/wind_flute.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_19_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Лепесток",
+        "image": "collections/wind_petal.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_19_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ветряк",
+        "image": "collections/wind_windmill.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_20_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Яйцо орла",
+        "image": "collections/eagle_egg.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_20_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перо орла",
+        "image": "collections/eagle_feather.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_20_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перчатка",
+        "image": "collections/eagle_glove.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_20_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Статуэтка орла",
+        "image": "collections/eagle_statuette.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_20_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Веточка",
+        "image": "collections/eagle_twig.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_21_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Четки",
+        "image": "collections/wooden_beads.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_21_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Браслет",
+        "image": "collections/wooden_bracelet.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_21_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кубик",
+        "image": "collections/wooden_cube.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_21_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Фигурка",
+        "image": "collections/wooden_figurine.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_21_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ступа",
+        "image": "collections/wooden_mortar.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_22_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Голова",
+        "image": "collections/shaman_cap.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_22_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Снов",
+        "image": "collections/shaman_dream.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_22_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Варган",
+        "image": "collections/shaman_harp.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_22_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Жезл",
+        "image": "collections/shaman_rod.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_22_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Бубен",
+        "image": "collections/shaman_tyungur.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_23_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Амулет индиго",
+        "image": "collections/indigo_amulet.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_23_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Синий клевер",
+        "image": "collections/indigo_blue_clover.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_23_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Бабочка индиго",
+        "image": "collections/indigo_butterfly.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_23_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Лента индиго",
+        "image": "collections/indigo_ribbon.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_23_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кольцо индиго",
+        "image": "collections/indigo_ring.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_24_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Шоколадка",
+        "image": "collections/sweets_chocolate.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_24_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Сахарная вата",
+        "image": "collections/sweets_floss.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_24_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Мороженое",
+        "image": "collections/sweets_ice.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_24_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Малиновый джем",
+        "image": "collections/sweets_jam.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_24_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кленовый сироп",
+        "image": "collections/sweets_sed.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_25_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ремень джентльмена",
+        "image": "collections/cavalery_belt.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_25_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Запонки",
+        "image": "collections/cavalery_cufflinks.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_25_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Портсигар",
+        "image": "collections/cavalery_sigarette.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_25_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Галстук",
+        "image": "collections/cavalery_tie.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_25_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Часы",
+        "image": "collections/cavalery_watch.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_26_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Книга",
+        "image": "collections/forgotten_book.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_26_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Трость",
+        "image": "collections/forgotten_cane.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_26_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перчатка",
+        "image": "collections/forgotten_glow.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_26_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Зонт",
+        "image": "collections/forgotten_umbrella.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_26_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Саквояж",
+        "image": "collections/forgotten_valise.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_27_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Коралл",
+        "image": "collections/sea_coral.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_27_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Морская рыбка",
+        "image": "collections/sea_fish.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_27_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Конёк",
+        "image": "collections/sea_horse.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_27_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ракушка",
+        "image": "collections/sea_shell.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_27_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Морская звезда",
+        "image": "collections/sea_star.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_28_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ящерица",
+        "image": "collections/reptile_lizard.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_28_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Змейка",
+        "image": "collections/reptile_snake.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_28_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Уж",
+        "image": "collections/reptile_asp.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_28_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Каменная змея",
+        "image": "collections/reptile_stonesnake.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_28_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Игуана",
+        "image": "collections/reptilei_iguana.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_29_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Пули",
+        "image": "collections/hunter_ammunition.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_29_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Фляжка",
+        "image": "collections/hunter_flask.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_29_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Шапка",
+        "image": "collections/hunter_hat.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_29_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Горн",
+        "image": "collections/hunter_horn.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_29_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Трубка",
+        "image": "collections/hunter_pipe.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_30_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перчатки",
+        "image": "collections/illusionist_gloves.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_30_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Цилиндр",
+        "image": "collections/illusionist_rabbit.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_30_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Немного магии",
+        "image": "collections/illusionist_wand.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_30_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Черный ящик",
+        "image": "collections/illusionist_box.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_30_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Связка платков",
+        "image": "collections/illusionist_kerchiefs.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_31_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Револьвер",
+        "image": "collections/cowboy_revolver.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_31_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Лассо",
+        "image": "collections/cowboy_lasso.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_31_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Шпоры",
+        "image": "collections/cowboy_spur.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_31_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Повязка",
+        "image": "collections/cowboy_scarf.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_31_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кнут",
+        "image": "collections/cowboy_whip.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_32_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Лампочка",
+        "image": "collections/inventor_bulb.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_32_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Фотоаппарат",
+        "image": "collections/inventor_camera.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_32_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Граммофон",
+        "image": "collections/inventor_gramophone.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_32_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Телефон",
+        "image": "collections/inventor_telephone.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_32_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Печатная машинка",
+        "image": "collections/inventor_typewriter.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_33_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Тибетская",
+        "image": "collections/mask_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_33_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Конго",
+        "image": "collections/mask_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_33_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Венецианская",
+        "image": "collections/mask_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_33_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Майя",
+        "image": "collections/mask_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_33_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Африканская",
+        "image": "collections/mask_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_34_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Синее стеклышко",
+        "image": "collections/blue_glass.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_34_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Белое стеклышко",
+        "image": "collections/white_glass.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_34_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Красное стеклышко",
+        "image": "collections/red_glass.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_34_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Голубое стеклышко",
+        "image": "collections/light_blue_glass.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_34_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Зеленое стеклышко",
+        "image": "collections/green_glass.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_35_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Соусница",
+        "image": "collections/ware_sauce_boat.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_35_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Суповая ложка",
+        "image": "collections/ware_soup_spoon.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_35_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Заварник",
+        "image": "collections/ware_teapot.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_35_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Бокал",
+        "image": "collections/ware_wineglass.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_35_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Чашка",
+        "image": "collections/ware_tea_couple.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_36_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Хлыст",
+        "image": "collections/brave_crop.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_36_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Маска",
+        "image": "collections/brave_mask.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_36_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Кобура",
+        "image": "collections/brave_holster.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_36_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Порох",
+        "image": "collections/brave_gunpowder.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_36_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Седло",
+        "image": "collections/brave_saddle.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_37_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Горная сирень",
+        "image": "collections/mountain_lilac.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_37_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Лунная маргаритка",
+        "image": "collections/moon_daisy.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_37_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Восточный лотос",
+        "image": "collections/oriental_lotus.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_37_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Нежный жасмин",
+        "image": "collections/tender_jasmine.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_37_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Солнечные лилии",
+        "image": "collections/sun_lilies.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_1_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Туз",
+        "image": "collections/card_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_1_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Король",
+        "image": "collections/card_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_1_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Дама",
+        "image": "collections/card_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_1_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Валет",
+        "image": "collections/card_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_1_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Джокер",
+        "image": "collections/card_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_2_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Саргасс",
+        "image": "collections/seaweed_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_2_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Филлофора",
+        "image": "collections/seaweed_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_2_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Ламинария",
+        "image": "collections/seaweed_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_2_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Фукус",
+        "image": "collections/seaweed_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_2_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Каулерпа",
+        "image": "collections/seaweed_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_3_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Розовая",
+        "image": "collections/seashell_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_3_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Шипастая",
+        "image": "collections/seashell_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_3_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Голубая",
+        "image": "collections/seashell_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_3_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Закрученная",
+        "image": "collections/seashell_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_3_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Гребешок",
+        "image": "collections/seashell_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_4_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перо чайки",
+        "image": "collections/feather_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_4_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перо фазана",
+        "image": "collections/feather_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_4_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перо фламинго",
+        "image": "collections/feather_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_4_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перо иволги",
+        "image": "collections/feather_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_4_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Перо ара",
+        "image": "collections/feather_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_6_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Голубая",
+        "image": "collections/bait_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_6_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Зеленая",
+        "image": "collections/bait_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_6_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Жёлтая",
+        "image": "collections/bait_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_6_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Полосатая",
+        "image": "collections/bait_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_6_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Радужная",
+        "image": "collections/bait_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_7_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Красноглазая",
+        "image": "collections/frog_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_7_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Озёрная",
+        "image": "collections/frog_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_7_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Квакша",
+        "image": "collections/frog_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_7_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Древолаз",
+        "image": "collections/frog_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_7_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Тигровая",
+        "image": "collections/frog_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_8_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Бандана",
+        "image": "collections/pirate_1.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_8_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Сабля",
+        "image": "collections/pirate_2.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_8_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Треуголка",
+        "image": "collections/pirate_3.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_8_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Крюк",
+        "image": "collections/pirate_4.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_8_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Деревянная нога",
+        "image": "collections/pirate_5.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_9_1",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Алый кальмар",
+        "image": "collections/underwater_squid.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_9_2",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Сельдяной король",
+        "image": "collections/underwater_herring.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_9_3",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Медуза",
+        "image": "collections/underwater_jellyfish.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_9_4",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Манта",
+        "image": "collections/underwater_manta.png"
+    },
+    {
+        "type": "collectionItem",
+        "id": "C_SEA_9_5",
+        "volume": 1,
+        "sellCoins": 200,
+        "name": "Голубой марлин",
+        "image": "collections/underwater_marlin.png"
+    }
+]

@@ -256,6 +256,16 @@ class RemoteLocation:
 
 
 @dataclass
+class NeighborPlayer:
+    id: str
+    level: int
+    have_treasure: bool
+    have_port: bool = False
+    name: str = ""
+    profile_name: str = ""
+
+
+@dataclass
 class FarmState:
     bank: Dict = field(default_factory=dict)
     level: int = 0
@@ -269,6 +279,8 @@ class FarmState:
     work_places: List = field(default_factory=list)
     partners: Dict = field(default_factory=dict)
     help_points: int = 0
+    friends: List[str] = field(default_factory=list)
+    remoteTreasure: List[Dict] = field(default_factory=list)
     main_storage: Storage = field(default_factory=Storage)
     all_objects: Dict[int, GameObject] = field(default_factory=dict)
     factories: List[Factory] = field(default_factory=list)
@@ -276,4 +288,5 @@ class FarmState:
     greenhouses: List[Greenhouse] = field(default_factory=list)
     animals: List[Animal] = field(default_factory=list)
     houses: List[House] = field(default_factory=list)
+    sea_start_port: GameObject = None
     locations: Dict[str, RemoteLocation] = field(default_factory=dict)

@@ -1,0 +1,1137 @@
+{
+    "type": "granary",
+    "id": "B_GRANARY",
+    "config": "@GRANARY_CONFIG",
+    "sellCoins": 25000,
+    "name": "Амбар",
+    "level": 5,
+    "buyCoins": 250000,
+    "buySilvers": 0,
+    "buyCash": 0,
+    "originalBuyReal": 0,
+    "openCash": 5,
+    "shopImage": "buildings/m_barn.png",
+    "hint": "В амбаре всё создаётся вручную и быстро.",
+    "objType": 0,
+    "objAnims": [
+        "b_barn",
+        "b_barn_f"
+    ],
+    "existSellPickup": true,
+    "multiPlace": false,
+    "moved": true,
+    "dynamicLight": false,
+    "upgrades": [
+        {
+            "xp": 100,
+            "humanPlaces": 0,
+            "fodderPlaces": 0,
+            "materials": [
+                {
+                    "count": 15,
+                    "item": "@CR_WOODBAR"
+                },
+                {
+                    "count": 6,
+                    "item": "@CR_GLASSPLATE"
+                },
+                {
+                    "count": 15,
+                    "item": "@CR_ROPE"
+                }
+            ]
+        },
+        {
+            "xp": 200,
+            "humanPlaces": 0,
+            "fodderPlaces": 0,
+            "materials": [
+                {
+                    "count": 25,
+                    "item": "@CR_SILK"
+                },
+                {
+                    "count": 25,
+                    "item": "@CR_BRICKS"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_SWEATER"
+                }
+            ]
+        },
+        {
+            "xp": 300,
+            "humanPlaces": 0,
+            "fodderPlaces": 0,
+            "materials": [
+                {
+                    "count": 5,
+                    "item": "@CR_TEAPORT"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_CHEESE"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_CHEEZCAKE"
+                }
+            ]
+        },
+        {
+            "xp": 1000,
+            "humanPlaces": 0,
+            "fodderPlaces": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_FORCE"
+                },
+                {
+                    "count": 25,
+                    "item": "@CR_SLATE"
+                },
+                {
+                    "count": 10,
+                    "item": "@CR_FRAME"
+                }
+            ],
+            "sellPickup": "@b_granary_sell"
+        }
+    ],
+    "rotateLevel": 3,
+    "backImage": "buildings/barn.png",
+    "giftCoinses": [
+        {
+            "level": 3,
+            "count": 55000
+        },
+        {
+            "level": 4,
+            "count": 200000
+        }
+    ],
+    "crafts": [
+        {
+            "id": "U_CR_AFTERHALL",
+            "name": "Послезавтрак +5 Энергии",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_HALLOWEEN_CUP"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_HALLOWEEN_DONUT"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_AFTERHALL"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_CHICKEN_1",
+            "name": "Кормушка для 2-х птиц",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@S_WHEAT"
+                },
+                {
+                    "count": 10,
+                    "item": "@S_BEAN"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_CHICKEN_1A"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_STRING_ESC",
+            "name": "Проволока",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@S_WHEAT"
+                },
+                {
+                    "count": 10,
+                    "item": "@S_STRAWBERRY"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_STRING"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_HAY",
+            "name": "Сено",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 5,
+                    "item": "@CR_GRASS"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_FAN"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_HAY"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_HEN_EGGS",
+            "name": "Лоток куриных яиц",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_EGG_CHICK"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_HAY"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_HEN_EGGS"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_ROPE",
+            "name": "Канат",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@S_FLAX"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_BUCKET_WATER"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_ROPE"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_GOOSE_EGGS",
+            "name": "Корзинка гусиных яиц",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_EGG_GOOS"
+                },
+                {
+                    "count": 3,
+                    "item": "@CR_BRUSHWOOD"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_GOOSE_EGGS"
+            },
+            "lock": true,
+            "unlocks": [
+                {
+                    "count": 15,
+                    "item": "@CR_MILK"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_GLU"
+                },
+                {
+                    "count": 15,
+                    "item": "@CR_WOOL"
+                }
+            ],
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_TURKEY_EGGS",
+            "name": "Упаковка индюшачьих яиц",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_EGG_TURKEY"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_WOOL"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_TURKEY_EGGS"
+            },
+            "lock": true,
+            "unlocks": [
+                {
+                    "count": 10,
+                    "item": "@CR_SILK"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_WINDOW"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_GOLD_05"
+                }
+            ],
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_MATCH",
+            "name": "Спички",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 5,
+                    "item": "@CR_GOOSE_EGGS"
+                },
+                {
+                    "count": 20,
+                    "item": "@CR_WOOL"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_MATCH"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_GLU",
+            "name": "Клей",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 15,
+                    "item": "@S_FLAX"
+                },
+                {
+                    "count": 3,
+                    "item": "@CR_BUCKET_WATER"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_GLU"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_CART",
+            "name": "Повозка",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_PLANK"
+                },
+                {
+                    "count": 10,
+                    "item": "@CR_NAIL"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_CART"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_BLUEBERRY",
+            "name": "Черника",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 5,
+                    "item": "@CR_HEN_EGGS"
+                },
+                {
+                    "count": 20,
+                    "item": "@CR_MILK"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_BLUEBERRY"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_FIREWOOD",
+            "name": "Дрова",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@R_WOOD"
+                },
+                {
+                    "count": 1,
+                    "item": "@ENERGY"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_FIREWOOD"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_FIREWOOD_1",
+            "name": "Дрова",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@R_SPRUCE"
+                },
+                {
+                    "count": 3,
+                    "item": "@ENERGY"
+                }
+            ],
+            "result": {
+                "count": 3,
+                "item": "@CR_FIREWOOD"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_FIREWOOD_2",
+            "name": "Дрова",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@R_SEQ"
+                },
+                {
+                    "count": 7,
+                    "item": "@ENERGY"
+                }
+            ],
+            "result": {
+                "count": 7,
+                "item": "@CR_FIREWOOD"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_COW_3",
+            "name": "Тюк сена на 25 порций",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 5,
+                    "item": "@CR_HAY"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_ROPE"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_COW_3"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_COW_6",
+            "name": "Тюк сена на 150 порций",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 30,
+                    "item": "@CR_HAY"
+                },
+                {
+                    "count": 6,
+                    "item": "@CR_ROPE"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_COW_6"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_FIRE",
+            "name": "Огонь",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_BRUSHWOOD"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_FIRE"
+                }
+            ],
+            "result": {
+                "count": 3,
+                "item": "@CR_FIRE"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_FIRE_1",
+            "name": "Огонь",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_FIREWOOD"
+                },
+                {
+                    "count": 5,
+                    "item": "@CR_FIRE"
+                }
+            ],
+            "result": {
+                "count": 15,
+                "item": "@CR_FIRE"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_FIRE_2",
+            "name": "Огонь",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@R_COAL"
+                },
+                {
+                    "count": 10,
+                    "item": "@CR_FIRE"
+                }
+            ],
+            "result": {
+                "count": 25,
+                "item": "@CR_FIRE"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_D_TRAP",
+            "name": "Ловушка для Лисицы",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 3,
+                    "item": "@CR_NAIL"
+                },
+                {
+                    "count": 2,
+                    "item": "@CR_TINPLANE"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@D_TRAP"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_1",
+            "name": "Корм для свиней на 2 порции",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_GRASS"
+                },
+                {
+                    "count": 2,
+                    "item": "@CR_MILK"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_PIG_1"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_1B",
+            "name": "Корм для свиней на 2 порции",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 4,
+                    "item": "@CR_BRUSHWOOD"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_EGG_CHICK"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_PIG_1"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_1C",
+            "name": "Корм для свиней на 2 порции",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@S_BEET"
+                },
+                {
+                    "count": 2,
+                    "item": "@R_STONE"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_PIG_1"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_1D",
+            "name": "Корм для свиней на 2 порции",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@S_CUCUMBER"
+                },
+                {
+                    "count": 10,
+                    "item": "@S_CARROT"
+                }
+            ],
+            "result": {
+                "count": 2,
+                "item": "@GR_PIG_1"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_1E",
+            "name": "Корм для свиней на 2 порции",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 20,
+                    "item": "@S_MARROW"
+                },
+                {
+                    "count": 30,
+                    "item": "@CR_FIRE"
+                }
+            ],
+            "result": {
+                "count": 5,
+                "item": "@GR_PIG_1"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOOD_01",
+            "name": "Каша для собак",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 50,
+                    "item": "@S_WHEAT"
+                },
+                {
+                    "count": 50,
+                    "item": "@CR_FIRE"
+                }
+            ],
+            "result": {
+                "count": 10,
+                "item": "@CR_DOGFOOD_01"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOOD_04",
+            "name": "Каша для собак",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 5,
+                    "item": "@S_PEAR"
+                },
+                {
+                    "count": 50,
+                    "item": "@CR_FIRE"
+                }
+            ],
+            "result": {
+                "count": 10,
+                "item": "@CR_DOGFOOD_01"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_IN_TENT",
+            "name": "Палатка",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 2,
+                    "item": "@CR_SILK"
+                },
+                {
+                    "count": 2,
+                    "item": "@CR_STRING"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@IN_TENT"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_IN_LIGHT",
+            "name": "Керосиновая лампа",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 3,
+                    "item": "@CR_STRING"
+                },
+                {
+                    "count": 8,
+                    "item": "@S_STRAWBERRY"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@IN_LIGHT"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOOD_03GRAN",
+            "name": "Рыба",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_GOLD_STATUE_03"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_GOLD_STATUE_04"
+                }
+            ],
+            "result": {
+                "count": 10,
+                "item": "@CR_DOGFOOD_03"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_SAK",
+            "name": "Мешок",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 3,
+                    "item": "@CR_CARTOON"
+                },
+                {
+                    "count": 1,
+                    "item": "@CR_SILK"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_SAK"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_RUBY_DUST",
+            "name": "Рубиновая пыль",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 10,
+                    "item": "@CR_GOLD_RED_STONE_03"
+                },
+                {
+                    "count": 14,
+                    "item": "@CR_ASTERIX"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_RUBY_DUST"
+            },
+            "lock": true,
+            "unlocks": [
+                {
+                    "count": 20,
+                    "item": "@CR_GOLD_RED_STONE_01"
+                },
+                {
+                    "count": 15,
+                    "item": "@CR_GOLD_RED_STONE_02"
+                },
+                {
+                    "count": 10,
+                    "item": "@CR_GOLD_RED_STONE_03"
+                }
+            ],
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOODPACK_02",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@GR_CHICKEN_1A"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_DOGFOODPACK_02"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOODPACK_03",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@GR_CHICKEN_2"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_DOGFOODPACK_03"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOODPACK_04",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@GR_CHICKEN_3"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_DOGFOODPACK_04"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOODPACK_05",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@GR_PIG_1"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_DOGFOODPACK_05"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOODPACK_06",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@GR_PIG_2"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_DOGFOODPACK_06"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_CR_DOGFOODPACK_07",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@GR_PIG_3"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@CR_DOGFOODPACK_07"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_CHICKEN_02",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_DOGFOODPACK_02"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_CHICKEN_1A"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_CHICKEN_03",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_DOGFOODPACK_03"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_CHICKEN_2"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_CHICKEN_04",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_DOGFOODPACK_04"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_CHICKEN_3"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_05",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_DOGFOODPACK_05"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_PIG_1"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_06",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_DOGFOODPACK_06"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_PIG_2"
+            },
+            "lock": false,
+            "productionTime": 0
+        },
+        {
+            "id": "U_GR_PIG_07",
+            "level": 3,
+            "price": 0,
+            "materials": [
+                {
+                    "count": 1,
+                    "item": "@CR_DOGFOODPACK_07"
+                },
+                {
+                    "count": 100,
+                    "item": "@COINS"
+                }
+            ],
+            "result": {
+                "count": 1,
+                "item": "@GR_PIG_3"
+            },
+            "lock": false,
+            "productionTime": 0
+        }
+    ]
+}

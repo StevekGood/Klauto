@@ -1,10 +1,11 @@
 from typing import List, Optional, Dict, Any
+import time
+import json
 
 from core.ports import GameClientPort, LoggerPort
 from domain.models import (
-    FarmState, Factory, Greenhouse, GreenhouseFactory
+    NeighborPlayer, FarmState, Factory, Greenhouse, GreenhouseFactory
 )
-
 
 class FarmService:
     """Business logic for farm operations. Depends only on ports."""
@@ -162,8 +163,11 @@ class FarmService:
         if client.is_error_response(response):
             self.logger.log_full("FarmService", "factory_collection_error", payload=response)
         else:
+            if "__energy__" in reserved_materials:
+                state.energy = max(0, state.energy - reserved_materials["__energy__"])
+                self.logger.log_truncated("FarmService", "energy_deducted", amount=reserved_materials["__energy__"], remaining=state.energy)
             for factory in factories:
-                factory.materials = []   # collected
+                factory.materials = []
             self._apply_response_updates(state, response)
         return response
 
@@ -215,6 +219,9 @@ class FarmService:
         if client.is_error_response(response):
             self.logger.log_full("FarmService", "craft_mass_error", payload=response)
         else:
+            if "__energy__" in reserved_materials:
+                state.energy = max(0, state.energy - reserved_materials["__energy__"])
+                self.logger.log_truncated("FarmService", "energy_deducted", amount=reserved_materials["__energy__"], remaining=state.energy)
             self._apply_response_updates(state, response)
         return response
 
@@ -333,3 +340,367 @@ class FarmService:
         else:
             self.logger.log_full("FarmService", "fertilization_error", payload=response)
         return response
+
+    def _is_ping_event(self, evt: Dict) -> bool:
+        return evt.get("type") == "evt" and "ping" in str(evt.get("action", "")).lower()
+
+    def _wait_for_non_ping_response(self, client: GameClientPort, initial_response: Dict) -> Dict:
+        response = initial_response
+        max_retries = 10
+        for _ in range(max_retries):
+            if client.is_error_response(response):
+                return response
+            events = response.get("events", [])
+            if not any(self._is_ping_event(evt) for evt in events):
+                return response
+            self.logger.log_truncated("FarmService", "player_info_pending")
+            time.sleep(1)
+            response = client.execute_raw_action(events=[])
+        self.logger.log_truncated("FarmService", "ping_timeout")
+        return response
+
+    def change_location(self, client: GameClientPort, location_id: str, user_id: Optional[str] = None) -> Dict:
+        """
+        Change current location to main/port/neighbor.
+        If user_id is None, move to own location (main or port).
+        """
+        event = {
+            "type": "gameState",
+            "action": "gameState",
+            "locationId": location_id,
+            "user": user_id if user_id else None
+        }
+        self.logger.log_truncated("FarmService", "changing_location", location=location_id, user=user_id)
+        response = client.execute_raw_action([event])
+        if client.is_error_response(response):
+            self.logger.log_full("FarmService", "change_location_error", payload=response)
+        else:
+            response = self._wait_for_non_ping_response(client, response)
+            self.logger.log_truncated("FarmService", "location_changed", location=location_id, user=user_id)
+        return response
+
+    def go_to_own_port(self, client: GameClientPort, state: FarmState) -> Dict:
+        """Move from own main location to own port location."""
+        if not state.sea_start_port:
+            self.logger.log_truncated("FarmService", "sea_start_port_missing")
+            return {}
+        self.logger.log_truncated("FarmService", "jumping_to_own_port")
+        jump_response = client.execute_raw_action([{
+            "type": "item",
+            "action": "jump",
+            "objId": int(state.sea_start_port.id)
+        }])
+        if client.is_error_response(jump_response):
+            self.logger.log_full("FarmService", "jump_to_port_error", payload=jump_response)
+            return jump_response
+        time.sleep(1)
+        return self.change_location(client, "port")
+
+    def go_to_own_main(self, client: GameClientPort) -> Dict:
+        """Move from own port location to own main location."""
+        self.logger.log_truncated("FarmService", "returning_to_own_main")
+        response = client.execute_raw_action([{
+            "type": "item",
+            "action": "toMain"
+        }])
+        if client.is_error_response(response):
+            self.logger.log_full("FarmService", "to_main_error", payload=response)
+        else:
+            self.logger.log_truncated("FarmService", "returned_to_main")
+        return response
+
+    def visit_neighbor(self, client: GameClientPort, location_type: str, user_id: str) -> Dict:
+        """Visit a neighbor's main or port location."""
+        return self.change_location(client, location_type, user_id=user_id)
+
+    def get_eligible_neighbor_players(
+        self,
+        client: GameClientPort,
+        friends: List[str],
+        location_type: str = "main"
+    ) -> List[NeighborPlayer]:
+        """
+        Fetch neighbor info, filter by haveTreasure (and optionally havePort),
+        sort by level descending.
+        """
+        if not friends:
+            self.logger.log_truncated("FarmService", "no_friends")
+            return []
+
+        all_players: List[NeighborPlayer] = []
+        batch_size = 40
+
+        for i in range(0, len(friends), batch_size):
+            batch = friends[i:i + batch_size]
+            self.logger.log_truncated("FarmService", "fetching_player_batch",
+                                      batch_index=i // batch_size, count=len(batch))
+
+            response = client.execute_raw_action(events=[{
+                "type": "players",
+                "action": "getInfo",
+                "players": batch
+            }])
+
+            response = self._wait_for_non_ping_response(client, response)
+
+            if client.is_error_response(response):
+                self.logger.log_full("FarmService", "player_info_error", payload=response)
+                continue
+
+            for evt in response.get("events", []):
+                if self._is_ping_event(evt):
+                    continue
+                if "id" in evt and "level" in evt:
+                    lite = evt.get("liteGameState", {})
+                    all_players.append(NeighborPlayer(
+                        id=str(evt.get("id", "")),
+                        level=int(evt.get("level", 0)),
+                        have_treasure=lite.get("haveTreasure", False),
+                        have_port=lite.get("havePort", False),
+                        name=evt.get("name", ""),
+                        profile_name=evt.get("profileName", "")
+                    ))
+                elif "players" in evt and isinstance(evt["players"], list):
+                    for p in evt["players"]:
+                        lite = p.get("liteGameState", {})
+                        all_players.append(NeighborPlayer(
+                            id=str(p.get("id", "")),
+                            level=int(p.get("level", 0)),
+                            have_treasure=lite.get("haveTreasure", False),
+                            have_port=lite.get("havePort", False),
+                            name=p.get("name", ""),
+                            profile_name=p.get("profileName", "")
+                        ))
+
+        eligible = [p for p in all_players if p.have_treasure]
+        if location_type.lower() == "port":
+            eligible = [p for p in eligible if p.have_port]
+        eligible.sort(key=lambda p: p.level, reverse=True)
+
+        self.logger.log_truncated("FarmService", "neighbor_players_ready",
+                                  total=len(all_players), eligible=len(eligible), location=location_type)
+        return eligible
+
+    def get_free_shovel_count(self, state: FarmState, user_id: str) -> int:
+        """Return the number of free shovels available for a given neighbor."""
+        for entry in state.remoteTreasure:
+            if str(entry.get("user", "")) == str(user_id):
+                return int(entry.get("count", 5))
+        return 5
+
+    def extract_game_objects_from_response(self, response: Dict) -> List[Dict]:
+        """Extract gameObjects list from a server response."""
+        objects = []
+        for evt in response.get("events", []):
+            if "gameObjects" in evt:
+                objects.extend(evt.get("gameObjects", []))
+        return objects
+
+    def dig_neighbor_objects(
+        self,
+        client: GameClientPort,
+        state: FarmState,
+        user_id: str,
+        objects: List[Dict],
+        shovel_extra_id: str = "REMOTE_SHOVEL",
+        use_gold_shovels: bool = False
+    ) -> Dict:
+        if not objects:
+            return {}
+
+        events = []
+        used_remote = 0
+        used_gold = 0
+        for obj in objects:
+            events.append({
+                "type": "item",
+                "extraId": shovel_extra_id,
+                "action": "remoteDig",
+                "objId": obj.get("id"),
+                "x": obj.get("x", 0),
+                "y": obj.get("y", 0)
+            })
+            if shovel_extra_id == "REMOTE_SHOVEL":
+                used_remote += 1
+            elif shovel_extra_id == "SHOVEL_EXTRA":
+                used_gold += 1
+
+        self.logger.log_truncated(
+            "FarmService", "posting_dig_events",
+            user=user_id, shovel=shovel_extra_id, count=len(events)
+        )
+        response = client.execute_raw_action(events)
+        if client.is_error_response(response):
+            self.logger.log_full("FarmService", "dig_neighbor_error", payload=response)
+            return response
+
+        response = self._wait_for_non_ping_response(client, response)
+        if client.is_error_response(response):
+            self.logger.log_full("FarmService", "dig_neighbor_error_after_ping", payload=response)
+            return response
+
+        treasure_objects = self._process_dig_response(
+            response, state, user_id, used_remote, used_gold
+        )
+        self._apply_response_updates(state, response)
+
+        # For each detected treasure, keep digging the same object
+        for treasure_id in treasure_objects:
+            obj = next((o for o in objects if int(o.get("id")) == treasure_id), None)
+            if obj:
+                self.dig_treasure_sequence(
+                    client, state, user_id, obj, use_gold_shovels=use_gold_shovels
+                )
+
+        return response
+
+    def _process_dig_response(
+        self,
+        response: Dict,
+        state: FarmState,
+        user_id: str,
+        used_remote_shovels: int,
+        used_gold_shovels: int
+    ) -> List[int]:
+        """Process a dig response: debit shovels, credit shovel refunds, return treasure object ids."""
+        treasure_objects: List[int] = []
+        alert_pending = False
+
+        # Debit used shovels first
+        if used_remote_shovels > 0:
+            self._debit_free_shovels(state, user_id, used_remote_shovels)
+        if used_gold_shovels > 0:
+            current = state.main_storage.get_item_count("SHOVEL_EXTRA")
+            state.main_storage.items["SHOVEL_EXTRA"] = max(0, current - used_gold_shovels)
+
+        for evt in response.get("events", []):
+            evt_type = evt.get("type", "")
+            evt_str = json.dumps(evt, ensure_ascii=False)
+
+            # Log each event for debugging
+            self.logger.log_truncated(
+                "FarmService", "dig_response_event",
+                evt_type=evt_type,
+                has_alert="SERVER_TREASURE_FOUND" in evt_str,
+                obj_id=evt.get("objId")
+            )
+
+            # Detect alert event (very lenient: search the entire event text)
+            if "SERVER_TREASURE_FOUND" in evt_str and evt_type == "alert":
+                alert_pending = True
+                self.logger.log_truncated("FarmService", "treasure_alert_detected")
+                continue
+
+            if evt_type == "pickup" and evt.get("action") == "add":
+                # Credit shovel refunds
+                for pickup in evt.get("pickups", []):
+                    if pickup.get("type") == "shovel":
+                        self._credit_free_shovels(state, user_id, 1)
+
+                # If the previous event was an alert, this pickup is the treasure
+                if alert_pending:
+                    obj_id = evt.get("objId")
+                    if obj_id is not None:
+                        treasure_objects.append(int(obj_id))
+                        self.logger.log_truncated(
+                            "FarmService", "treasure_object_found",
+                            obj_id=obj_id, total=len(treasure_objects)
+                        )
+                    alert_pending = False
+
+        return treasure_objects
+
+    def _debit_free_shovels(self, state: FarmState, user_id: str, count: int) -> None:
+        """Reduce free shovel count for a user."""
+        for entry in state.remoteTreasure:
+            if str(entry.get("user", "")) == str(user_id):
+                entry["count"] = max(0, int(entry.get("count", 5)) - count)
+                return
+        # Not found, add new entry
+        state.remoteTreasure.append({
+            "user": user_id,
+            "count": max(0, 5 - count),
+            "date": "0"
+        })
+
+    def _credit_free_shovels(self, state: FarmState, user_id: str, count: int) -> None:
+        """Increase free shovel count for a user."""
+        for entry in state.remoteTreasure:
+            if str(entry.get("user", "")) == str(user_id):
+                entry["count"] = int(entry.get("count", 5)) + count
+                return
+        # Not found, add with base 5 plus credit
+        state.remoteTreasure.append({
+            "user": user_id,
+            "count": 5 + count,
+            "date": "0"
+        })
+
+    def dig_treasure_sequence(
+        self,
+        client: GameClientPort,
+        state: FarmState,
+        user_id: str,
+        treasure_object: Dict,
+        use_gold_shovels: bool = False,
+        max_digs: int = 10
+    ) -> Dict:
+        """Repeatedly dig the same treasure object until no treasure is found or max_digs reached."""
+        last_response: Dict = {}
+        treasure_id = int(treasure_object.get("id"))
+
+        for attempt in range(max_digs):
+            free_shovels = self.get_free_shovel_count(state, user_id)
+            shovel_extra_id = None
+            used_remote = 0
+            used_gold = 0
+
+            if free_shovels > 0:
+                shovel_extra_id = "REMOTE_SHOVEL"
+                used_remote = 1
+            elif use_gold_shovels and state.main_storage.get_item_count("SHOVEL_EXTRA") > 0:
+                shovel_extra_id = "SHOVEL_EXTRA"
+                used_gold = 1
+            else:
+                self.logger.log_truncated(
+                    "FarmService", "treasure_sequence_stop_no_shovels",
+                    obj_id=treasure_id, attempt=attempt, free=free_shovels
+                )
+                break
+
+            event = {
+                "type": "item",
+                "extraId": shovel_extra_id,
+                "action": "remoteDig",
+                "objId": treasure_object.get("id"),
+                "x": treasure_object.get("x", 0),
+                "y": treasure_object.get("y", 0)
+            }
+            self.logger.log_truncated(
+                "FarmService", "treasure_sequence_dig",
+                obj_id=treasure_id, attempt=attempt, shovel=shovel_extra_id
+            )
+
+            response = client.execute_raw_action([event])
+            if client.is_error_response(response):
+                self.logger.log_full("FarmService", "treasure_sequence_error", payload=response)
+                break
+
+            response = self._wait_for_non_ping_response(client, response)
+            if client.is_error_response(response):
+                self.logger.log_full("FarmService", "treasure_sequence_error_after_ping", payload=response)
+                break
+
+            found = self._process_dig_response(response, state, user_id, used_remote, used_gold)
+            self._apply_response_updates(state, response)
+            last_response = response
+
+            # Continue only if the SAME object was flagged as treasure again
+            if treasure_id not in found:
+                self.logger.log_truncated(
+                    "FarmService", "treasure_sequence_done",
+                    obj_id=treasure_id, attempt=attempt
+                )
+                break
+
+        return last_response

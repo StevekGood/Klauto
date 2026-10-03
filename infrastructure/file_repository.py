@@ -64,6 +64,8 @@ class FileFarmRepository(FarmRepositoryPort):
         state.work_places = state_data.get("workPlaces", [])
         state.partners = state_data.get("partners", {})
         state.help_points = int(state_data.get("help", 0))
+        state.friends = state_data.get("friends", [])
+        state.remoteTreasure = state_data.get("remoteTreasure", [])
 
         # Main storage
         state.main_storage = Storage(
@@ -99,6 +101,10 @@ class FileFarmRepository(FarmRepositoryPort):
             elif obj_type in ["plumed", "hoofed", "breed"]:
                 typed_obj = Animal.from_dict(obj)
                 state.animals.append(typed_obj)
+                state.all_objects[obj_id] = typed_obj
+            elif obj_type == "seaStart":
+                typed_obj = GameObject.from_dict(obj)
+                state.sea_start_port = typed_obj
                 state.all_objects[obj_id] = typed_obj
             else:
                 typed_obj = GameObject.from_dict(obj)

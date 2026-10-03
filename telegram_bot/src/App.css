@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--tg-theme-text-color);
+  background: var(--tg-theme-bg-color);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.main {
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+}
+
+img {
+  width: 70px;
+  margin: 30px auto;
+}
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form .reg-form-table-container {
+  display: table;
+}
+
+form .reg-form-table-group {
+  display: table-row;
+}
+
+form .reg-form-table-group label {
+  max-width: 40vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+form .reg-form-table-group label,
+input {
+  display: table-cell;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+form .reg-form-table-group input {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding-left: 3px;
+}
+
+form .reg-form-flex-group button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form .reg-form-flex-group button {
+  width: 150px;
+  height: 35px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--tg-theme-button-text-color);
+  background: var(--tg-theme-button-color);
+  font-family: inherit;
+}
